@@ -81,3 +81,15 @@ print(user)
 func getRandomInt(arr: [Int]?) -> Int {
     arr?.randomElement() ?? (1...100).randomElement() ?? 0
 }
+
+
+
+func printSquare2(of number: Int) {
+    guard case let number = number, number > 0 else {return}
+
+    // 2: `number` is still available outside of `guard`
+    print("\(number) x \(number) is \(number * number)")
+}
+
+printSquare2(of: 0)
+printSquare2(of: 3)
