@@ -8,22 +8,24 @@
 import SwiftUI
 
 struct ContentView: View {
-    @State private var checkAmount = 0.0
+    @State private var checkAmount: Double? = nil
     @State private var numberOfPeople = 2
     @State private var tipPercentage = 20
     @FocusState private var amountIsFocused: Bool
 
-    let tipPercentages = 0...100
+    let tipPercentages = 0 ... 100
     let currency: FloatingPointFormatStyle<Double>.Currency = .currency(code: Locale.current.currency?.identifier ?? "USD")
     var totalPayment: Double {
         let tipSelection = Double(tipPercentage)
-        let tipValue = checkAmount * (tipSelection / 100)
-        let grandTotal = checkAmount + tipValue
+        let tipValue = (checkAmount ?? 0) * (tipSelection / 100)
+        let grandTotal = (checkAmount ?? 0) + tipValue
         return grandTotal
     }
+
     var paymentPerPerson: Double {
         totalPayment / Double(numberOfPeople)
     }
+
     var body: some View {
         NavigationView {
             Form {
@@ -61,13 +63,14 @@ struct ContentView: View {
                 } header: {
                     Text("How much tip do you want to leave?")
                 }
-                
+
                 // Total payment
                 Section {
                     Text(
                         totalPayment,
                         format: currency
                     )
+                    .foregroundColor(tipPercentage == 0 ? .red : .black)
                 } header: {
                     Text("Total Amount")
                 }
