@@ -29,7 +29,7 @@ struct ContentView: View {
         NavigationView {
             ZStack {
                 LinearGradient(
-                    colors: [.white, .cyan],
+                    colors: [.mint, .cyan],
                     startPoint: .top,
                     endPoint: .bottom
                 )
@@ -62,8 +62,8 @@ struct ContentView: View {
                         Button("Next") {
                             playerChoice = nil
                             round += 1
-                            shouldWin = Bool.random()
-                            appChoice = moves[Int.random(in: 0 ... 2)]
+                            shouldWin.toggle()
+                            appChoice = moves.shuffled()[Int.random(in: 0 ... 2)]
                         }
                     }
                     .alert("Result", isPresented: $showFinalAlert) {
