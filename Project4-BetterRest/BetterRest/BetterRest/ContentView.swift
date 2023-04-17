@@ -27,16 +27,21 @@ struct ContentView: View {
     var body: some View {
         NavigationView {
             Form {
-                VStack(alignment: .leading, spacing: 10) {
-                    Text("When do you want to wake up?")
-                        .font(.headline)
-
+                
+                Text("Recomended: \(wakeUp.formatted(date: .omitted, time: .shortened))")
+                    .font(.largeTitle)
+                
+                
+                Section {
                     DatePicker(
                         "Please enter a time",
                         selection: $wakeUp,
                         displayedComponents: .hourAndMinute
                     )
                     .labelsHidden()
+                } header: {
+                    Text("When do you want to wake up?")
+                        .font(.headline)
                 }
                 
                 VStack(alignment: .leading, spacing: 10) {
@@ -52,14 +57,24 @@ struct ContentView: View {
                 }
 
                 VStack(alignment: .leading, spacing: 10) {
-                    Text("Daily coffee intake")
-                        .font(.headline)
+//                    Text("Daily coffee intake")
+//                        .font(.headline)
                     
-                    Stepper(
-                        coffeeAmount == 1 ? "1 cup" : "\(coffeeAmount) cups",
-                        value: $coffeeAmount,
-                        in: 1 ... 20
-                    )                    
+                    Picker(
+                        "Daily coffee intake",
+                        selection: $coffeeAmount
+                    ) {
+                        ForEach(1 ... 20, id: \.self) { num in
+                            Text(num == 1 ? "1 cup" : "\(num) cups")
+                        }
+                    }
+                    .font(.headline)
+                    
+//                    Stepper(
+//                        coffeeAmount == 1 ? "1 cup" : "\(coffeeAmount) cups",
+//                        value: $coffeeAmount,
+//                        in: 1 ... 20
+//                    )
                 }
             }
             .navigationTitle("BetterRest")
@@ -98,6 +113,7 @@ struct ContentView: View {
             )
             
             let sleepTime = wakeUp - prediction.actualSleep
+            wakeUp = sleepTime
             
             alertTitle = "Your ideal bedtime is"
             alertMessage = sleepTime.formatted(date: .omitted, time: .shortened)
