@@ -19,9 +19,10 @@ struct ControllingAnimationStack: View {
         }
         .frame(width: 200, height: 200)
         .background(enabled ? .blue : .red)
+        .animation(.default, value: enabled)
         .foregroundColor(.white)
         .clipShape(RoundedRectangle(cornerRadius: enabled ? 60 : 0))
-        .animation(.default, value: enabled)
+        .animation(.interpolatingSpring(stiffness: 10, damping: 1), value: enabled)
         
         
     }

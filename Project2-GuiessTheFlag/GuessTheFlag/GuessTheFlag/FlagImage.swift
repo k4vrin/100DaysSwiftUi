@@ -25,3 +25,4 @@ struct FlagImage_Previews: PreviewProvider {
         FlagImage("US")
     }
 }
+

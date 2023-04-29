@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State private var animation = false
+
     @State private var showingScore = false
     @State private var scoreTitle = ""
     @State var countries = ["Estonia", "France", "Germany", "Ireland", "Italy", "Nigeria", "Poland", "Russia", "Spain", "UK", "US"].shuffled()
@@ -15,6 +17,8 @@ struct ContentView: View {
     @State var score = 0
     @State var totalQuestions = 0
     @State var showEndResult = false
+    @State var selectedNumber = -1
+
     var body: some View {
         ZStack {
             RadialGradient(
@@ -45,11 +49,19 @@ struct ContentView: View {
                     ForEach(0 ..< 3) { number in
                         Button {
                             flagTaped(number)
+                            selectedNumber = number
+                            animation.toggle()
                         } label: {
                             FlagImage(countries[number])
+                                .rotation3DEffect(
+                                    .degrees(selectedNumber == number && animation ? 365 : 0),
+                                    axis: (x: 0, y: 1, z: 0)
+                                )
+                                .opacity(selectedNumber != number && animation ? 0.25 : 1)
                         }
                     }
                 }
+                .animation(.default, value: animation)
                 .frame(maxWidth: .infinity)
                 .padding(.vertical, 20)
                 .background(.thinMaterial)
@@ -94,14 +106,17 @@ struct ContentView: View {
     }
 
     func askQuestion() {
+        animation.toggle()
         countries.shuffle()
         correctAnswer = Int.random(in: 0...2)
     }
 
     func restartGame() {
+        animation.toggle()
         score = 0
         countries.shuffle()
         correctAnswer = Int.random(in: 0...2)
+        totalQuestions = 0
     }
 
     func flagOf(number: Int) -> String {

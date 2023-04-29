@@ -7,38 +7,22 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		4C2F656929F928DD009A0DD6 /* AnimationGestures.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C2F656829F928DD009A0DD6 /* AnimationGestures.swift */; };
-		4C2F656B29F92ACE009A0DD6 /* SnakeAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C2F656A29F92ACE009A0DD6 /* SnakeAnimation.swift */; };
-		4C2F656D29F93246009A0DD6 /* TransitionAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C2F656C29F93246009A0DD6 /* TransitionAnimation.swift */; };
-		4C2F656F29F9368F009A0DD6 /* ModifierTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C2F656E29F9368F009A0DD6 /* ModifierTransition.swift */; };
-		4CC3D23329F525B6008DD52A /* AnimationsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CC3D23229F525B6008DD52A /* AnimationsApp.swift */; };
-		4CC3D23529F525B6008DD52A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CC3D23429F525B6008DD52A /* ContentView.swift */; };
-		4CC3D23729F525B7008DD52A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4CC3D23629F525B7008DD52A /* Assets.xcassets */; };
-		4CC3D23A29F525B7008DD52A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4CC3D23929F525B7008DD52A /* Preview Assets.xcassets */; };
-		4CC3D24129F526D0008DD52A /* ImplicitAnimations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CC3D24029F526D0008DD52A /* ImplicitAnimations.swift */; };
-		4CC3D24329F5390A008DD52A /* BindingAnimations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CC3D24229F5390A008DD52A /* BindingAnimations.swift */; };
-		4CC3D24529F53BF7008DD52A /* ExplicitAnimations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CC3D24429F53BF7008DD52A /* ExplicitAnimations.swift */; };
-		4CC3D24729F53E9B008DD52A /* ControllingAnimationStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CC3D24629F53E9B008DD52A /* ControllingAnimationStack.swift */; };
+		4CCA8E5329FD1A560043D610 /* EdutainmentApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CCA8E5229FD1A560043D610 /* EdutainmentApp.swift */; };
+		4CCA8E5529FD1A560043D610 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CCA8E5429FD1A560043D610 /* ContentView.swift */; };
+		4CCA8E5729FD1A570043D610 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4CCA8E5629FD1A570043D610 /* Assets.xcassets */; };
+		4CCA8E5A29FD1A570043D610 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4CCA8E5929FD1A570043D610 /* Preview Assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		4C2F656829F928DD009A0DD6 /* AnimationGestures.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationGestures.swift; sourceTree = "<group>"; };
-		4C2F656A29F92ACE009A0DD6 /* SnakeAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnakeAnimation.swift; sourceTree = "<group>"; };
-		4C2F656C29F93246009A0DD6 /* TransitionAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransitionAnimation.swift; sourceTree = "<group>"; };
-		4C2F656E29F9368F009A0DD6 /* ModifierTransition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModifierTransition.swift; sourceTree = "<group>"; };
-		4CC3D22F29F525B6008DD52A /* Animations.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Animations.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		4CC3D23229F525B6008DD52A /* AnimationsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationsApp.swift; sourceTree = "<group>"; };
-		4CC3D23429F525B6008DD52A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		4CC3D23629F525B7008DD52A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		4CC3D23929F525B7008DD52A /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		4CC3D24029F526D0008DD52A /* ImplicitAnimations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImplicitAnimations.swift; sourceTree = "<group>"; };
-		4CC3D24229F5390A008DD52A /* BindingAnimations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BindingAnimations.swift; sourceTree = "<group>"; };
-		4CC3D24429F53BF7008DD52A /* ExplicitAnimations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExplicitAnimations.swift; sourceTree = "<group>"; };
-		4CC3D24629F53E9B008DD52A /* ControllingAnimationStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControllingAnimationStack.swift; sourceTree = "<group>"; };
+		4CCA8E4F29FD1A560043D610 /* Edutainment.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Edutainment.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		4CCA8E5229FD1A560043D610 /* EdutainmentApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EdutainmentApp.swift; sourceTree = "<group>"; };
+		4CCA8E5429FD1A560043D610 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		4CCA8E5629FD1A570043D610 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		4CCA8E5929FD1A570043D610 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		4CC3D22C29F525B6008DD52A /* Frameworks */ = {
+		4CCA8E4C29FD1A560043D610 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -48,45 +32,37 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		4CC3D22629F525B6008DD52A = {
+		4CCA8E4629FD1A560043D610 = {
 			isa = PBXGroup;
 			children = (
-				4CC3D23129F525B6008DD52A /* Animations */,
-				4CC3D23029F525B6008DD52A /* Products */,
+				4CCA8E5129FD1A560043D610 /* Edutainment */,
+				4CCA8E5029FD1A560043D610 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		4CC3D23029F525B6008DD52A /* Products */ = {
+		4CCA8E5029FD1A560043D610 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				4CC3D22F29F525B6008DD52A /* Animations.app */,
+				4CCA8E4F29FD1A560043D610 /* Edutainment.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		4CC3D23129F525B6008DD52A /* Animations */ = {
+		4CCA8E5129FD1A560043D610 /* Edutainment */ = {
 			isa = PBXGroup;
 			children = (
-				4CC3D23229F525B6008DD52A /* AnimationsApp.swift */,
-				4CC3D23429F525B6008DD52A /* ContentView.swift */,
-				4CC3D23629F525B7008DD52A /* Assets.xcassets */,
-				4CC3D23829F525B7008DD52A /* Preview Content */,
-				4CC3D24029F526D0008DD52A /* ImplicitAnimations.swift */,
-				4CC3D24229F5390A008DD52A /* BindingAnimations.swift */,
-				4CC3D24429F53BF7008DD52A /* ExplicitAnimations.swift */,
-				4CC3D24629F53E9B008DD52A /* ControllingAnimationStack.swift */,
-				4C2F656829F928DD009A0DD6 /* AnimationGestures.swift */,
-				4C2F656A29F92ACE009A0DD6 /* SnakeAnimation.swift */,
-				4C2F656C29F93246009A0DD6 /* TransitionAnimation.swift */,
-				4C2F656E29F9368F009A0DD6 /* ModifierTransition.swift */,
+				4CCA8E5229FD1A560043D610 /* EdutainmentApp.swift */,
+				4CCA8E5429FD1A560043D610 /* ContentView.swift */,
+				4CCA8E5629FD1A570043D610 /* Assets.xcassets */,
+				4CCA8E5829FD1A570043D610 /* Preview Content */,
 			);
-			path = Animations;
+			path = Edutainment;
 			sourceTree = "<group>";
 		};
-		4CC3D23829F525B7008DD52A /* Preview Content */ = {
+		4CCA8E5829FD1A570043D610 /* Preview Content */ = {
 			isa = PBXGroup;
 			children = (
-				4CC3D23929F525B7008DD52A /* Preview Assets.xcassets */,
+				4CCA8E5929FD1A570043D610 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
 			sourceTree = "<group>";
@@ -94,39 +70,39 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		4CC3D22E29F525B6008DD52A /* Animations */ = {
+		4CCA8E4E29FD1A560043D610 /* Edutainment */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 4CC3D23D29F525B7008DD52A /* Build configuration list for PBXNativeTarget "Animations" */;
+			buildConfigurationList = 4CCA8E5D29FD1A570043D610 /* Build configuration list for PBXNativeTarget "Edutainment" */;
 			buildPhases = (
-				4CC3D22B29F525B6008DD52A /* Sources */,
-				4CC3D22C29F525B6008DD52A /* Frameworks */,
-				4CC3D22D29F525B6008DD52A /* Resources */,
+				4CCA8E4B29FD1A560043D610 /* Sources */,
+				4CCA8E4C29FD1A560043D610 /* Frameworks */,
+				4CCA8E4D29FD1A560043D610 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = Animations;
-			productName = Animations;
-			productReference = 4CC3D22F29F525B6008DD52A /* Animations.app */;
+			name = Edutainment;
+			productName = Edutainment;
+			productReference = 4CCA8E4F29FD1A560043D610 /* Edutainment.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		4CC3D22729F525B6008DD52A /* Project object */ = {
+		4CCA8E4729FD1A560043D610 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1430;
 				LastUpgradeCheck = 1430;
 				TargetAttributes = {
-					4CC3D22E29F525B6008DD52A = {
+					4CCA8E4E29FD1A560043D610 = {
 						CreatedOnToolsVersion = 14.3;
 					};
 				};
 			};
-			buildConfigurationList = 4CC3D22A29F525B6008DD52A /* Build configuration list for PBXProject "Animations" */;
+			buildConfigurationList = 4CCA8E4A29FD1A560043D610 /* Build configuration list for PBXProject "Edutainment" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -134,50 +110,42 @@
 				en,
 				Base,
 			);
-			mainGroup = 4CC3D22629F525B6008DD52A;
-			productRefGroup = 4CC3D23029F525B6008DD52A /* Products */;
+			mainGroup = 4CCA8E4629FD1A560043D610;
+			productRefGroup = 4CCA8E5029FD1A560043D610 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				4CC3D22E29F525B6008DD52A /* Animations */,
+				4CCA8E4E29FD1A560043D610 /* Edutainment */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		4CC3D22D29F525B6008DD52A /* Resources */ = {
+		4CCA8E4D29FD1A560043D610 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4CC3D23A29F525B7008DD52A /* Preview Assets.xcassets in Resources */,
-				4CC3D23729F525B7008DD52A /* Assets.xcassets in Resources */,
+				4CCA8E5A29FD1A570043D610 /* Preview Assets.xcassets in Resources */,
+				4CCA8E5729FD1A570043D610 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		4CC3D22B29F525B6008DD52A /* Sources */ = {
+		4CCA8E4B29FD1A560043D610 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4CC3D24329F5390A008DD52A /* BindingAnimations.swift in Sources */,
-				4C2F656B29F92ACE009A0DD6 /* SnakeAnimation.swift in Sources */,
-				4C2F656D29F93246009A0DD6 /* TransitionAnimation.swift in Sources */,
-				4CC3D24129F526D0008DD52A /* ImplicitAnimations.swift in Sources */,
-				4C2F656929F928DD009A0DD6 /* AnimationGestures.swift in Sources */,
-				4CC3D23529F525B6008DD52A /* ContentView.swift in Sources */,
-				4CC3D24729F53E9B008DD52A /* ControllingAnimationStack.swift in Sources */,
-				4C2F656F29F9368F009A0DD6 /* ModifierTransition.swift in Sources */,
-				4CC3D23329F525B6008DD52A /* AnimationsApp.swift in Sources */,
-				4CC3D24529F53BF7008DD52A /* ExplicitAnimations.swift in Sources */,
+				4CCA8E5529FD1A560043D610 /* ContentView.swift in Sources */,
+				4CCA8E5329FD1A560043D610 /* EdutainmentApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
-		4CC3D23B29F525B7008DD52A /* Debug */ = {
+		4CCA8E5B29FD1A570043D610 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -237,7 +205,7 @@
 			};
 			name = Debug;
 		};
-		4CC3D23C29F525B7008DD52A /* Release */ = {
+		4CCA8E5C29FD1A570043D610 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -291,14 +259,14 @@
 			};
 			name = Release;
 		};
-		4CC3D23E29F525B7008DD52A /* Debug */ = {
+		4CCA8E5E29FD1A570043D610 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"Animations/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"Edutainment/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -311,7 +279,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = dev.kavrin.Animations;
+				PRODUCT_BUNDLE_IDENTIFIER = dev.kavrin.Edutainment;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -319,14 +287,14 @@
 			};
 			name = Debug;
 		};
-		4CC3D23F29F525B7008DD52A /* Release */ = {
+		4CCA8E5F29FD1A570043D610 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"Animations/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"Edutainment/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -339,7 +307,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = dev.kavrin.Animations;
+				PRODUCT_BUNDLE_IDENTIFIER = dev.kavrin.Edutainment;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -350,25 +318,25 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		4CC3D22A29F525B6008DD52A /* Build configuration list for PBXProject "Animations" */ = {
+		4CCA8E4A29FD1A560043D610 /* Build configuration list for PBXProject "Edutainment" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				4CC3D23B29F525B7008DD52A /* Debug */,
-				4CC3D23C29F525B7008DD52A /* Release */,
+				4CCA8E5B29FD1A570043D610 /* Debug */,
+				4CCA8E5C29FD1A570043D610 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		4CC3D23D29F525B7008DD52A /* Build configuration list for PBXNativeTarget "Animations" */ = {
+		4CCA8E5D29FD1A570043D610 /* Build configuration list for PBXNativeTarget "Edutainment" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				4CC3D23E29F525B7008DD52A /* Debug */,
-				4CC3D23F29F525B7008DD52A /* Release */,
+				4CCA8E5E29FD1A570043D610 /* Debug */,
+				4CCA8E5F29FD1A570043D610 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 4CC3D22729F525B6008DD52A /* Project object */;
+	rootObject = 4CCA8E4729FD1A560043D610 /* Project object */;
 }
