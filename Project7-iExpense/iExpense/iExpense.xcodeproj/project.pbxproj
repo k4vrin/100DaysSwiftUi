@@ -18,6 +18,9 @@
 		4C01531C29FEAAFD00FBF75B /* SaveWUserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C01531B29FEAAFD00FBF75B /* SaveWUserDefaults.swift */; };
 		4C01531E29FEAE1500FBF75B /* SaveWAppStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C01531D29FEAE1500FBF75B /* SaveWAppStorage.swift */; };
 		4C01532029FEAF7400FBF75B /* SaveSwiftObjects.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C01531F29FEAF7400FBF75B /* SaveSwiftObjects.swift */; };
+		4CB3309E2A03C403006D0AFD /* ExpenseItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CB3309D2A03C403006D0AFD /* ExpenseItem.swift */; };
+		4CB330A12A03C4FA006D0AFD /* Expenses.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CB330A02A03C4FA006D0AFD /* Expenses.swift */; };
+		4CB330A32A03D527006D0AFD /* AddView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CB330A22A03D527006D0AFD /* AddView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +36,9 @@
 		4C01531B29FEAAFD00FBF75B /* SaveWUserDefaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveWUserDefaults.swift; sourceTree = "<group>"; };
 		4C01531D29FEAE1500FBF75B /* SaveWAppStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveWAppStorage.swift; sourceTree = "<group>"; };
 		4C01531F29FEAF7400FBF75B /* SaveSwiftObjects.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveSwiftObjects.swift; sourceTree = "<group>"; };
+		4CB3309D2A03C403006D0AFD /* ExpenseItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpenseItem.swift; sourceTree = "<group>"; };
+		4CB330A02A03C4FA006D0AFD /* Expenses.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Expenses.swift; sourceTree = "<group>"; };
+		4CB330A22A03D527006D0AFD /* AddView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,17 +71,14 @@
 		4C01530429FE9CF900FBF75B /* iExpense */ = {
 			isa = PBXGroup;
 			children = (
+				4CB3309F2A03C4D8006D0AFD /* Tutorials */,
 				4C01530529FE9CF900FBF75B /* iExpenseApp.swift */,
 				4C01530729FE9CF900FBF75B /* ContentView.swift */,
 				4C01530929FE9CFA00FBF75B /* Assets.xcassets */,
 				4C01530B29FE9CFA00FBF75B /* Preview Content */,
-				4C01531329FE9D2B00FBF75B /* StateInStruct.swift */,
-				4C01531529FEA12800FBF75B /* StateObjectTut.swift */,
-				4C01531729FEA4AD00FBF75B /* ShowHideViews.swift */,
-				4C01531929FEA8B100FBF75B /* UsingOnDelete.swift */,
-				4C01531B29FEAAFD00FBF75B /* SaveWUserDefaults.swift */,
-				4C01531D29FEAE1500FBF75B /* SaveWAppStorage.swift */,
-				4C01531F29FEAF7400FBF75B /* SaveSwiftObjects.swift */,
+				4CB3309D2A03C403006D0AFD /* ExpenseItem.swift */,
+				4CB330A02A03C4FA006D0AFD /* Expenses.swift */,
+				4CB330A22A03D527006D0AFD /* AddView.swift */,
 			);
 			path = iExpense;
 			sourceTree = "<group>";
@@ -86,6 +89,20 @@
 				4C01530C29FE9CFA00FBF75B /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		4CB3309F2A03C4D8006D0AFD /* Tutorials */ = {
+			isa = PBXGroup;
+			children = (
+				4C01531329FE9D2B00FBF75B /* StateInStruct.swift */,
+				4C01531529FEA12800FBF75B /* StateObjectTut.swift */,
+				4C01531729FEA4AD00FBF75B /* ShowHideViews.swift */,
+				4C01531929FEA8B100FBF75B /* UsingOnDelete.swift */,
+				4C01531B29FEAAFD00FBF75B /* SaveWUserDefaults.swift */,
+				4C01531D29FEAE1500FBF75B /* SaveWAppStorage.swift */,
+				4C01531F29FEAF7400FBF75B /* SaveSwiftObjects.swift */,
+			);
+			path = Tutorials;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -158,6 +175,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4CB330A12A03C4FA006D0AFD /* Expenses.swift in Sources */,
 				4C01531629FEA12800FBF75B /* StateObjectTut.swift in Sources */,
 				4C01531C29FEAAFD00FBF75B /* SaveWUserDefaults.swift in Sources */,
 				4C01531829FEA4AD00FBF75B /* ShowHideViews.swift in Sources */,
@@ -165,6 +183,8 @@
 				4C01531E29FEAE1500FBF75B /* SaveWAppStorage.swift in Sources */,
 				4C01531429FE9D2B00FBF75B /* StateInStruct.swift in Sources */,
 				4C01530829FE9CF900FBF75B /* ContentView.swift in Sources */,
+				4CB330A32A03D527006D0AFD /* AddView.swift in Sources */,
+				4CB3309E2A03C403006D0AFD /* ExpenseItem.swift in Sources */,
 				4C01530629FE9CF900FBF75B /* iExpenseApp.swift in Sources */,
 				4C01532029FEAF7400FBF75B /* SaveSwiftObjects.swift in Sources */,
 			);
