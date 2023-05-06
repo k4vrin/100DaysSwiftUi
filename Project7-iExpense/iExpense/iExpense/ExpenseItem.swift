@@ -12,6 +12,19 @@ import Foundation
 struct ExpenseItem: Identifiable, Codable {
     var id: UUID = UUID()
     let name: String
-    let type: String
+    let type: ExpenseType
     let amount: Double
+}
+
+
+
+enum ExpenseType: Codable {
+    case Personal, Business
+    
+    var description: String {
+        switch self {
+        case .Business: return "Business"
+        case .Personal: return "Personal"
+        }
+    }
 }
