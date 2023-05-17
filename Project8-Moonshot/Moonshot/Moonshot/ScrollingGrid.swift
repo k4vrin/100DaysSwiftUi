@@ -1,5 +1,5 @@
 //
-//  ScrolingGrid.swift
+//  ScrollingGrid.swift
 //  Moonshot
 //
 //  Created by Mostafa Hosseini on 5/15/23.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct ScrolingGrid: View {
+struct ScrollingGrid: View {
     
 //    let layout = [
 //        GridItem(.fixed(80)),
@@ -30,8 +30,8 @@ struct ScrolingGrid: View {
     }
 }
 
-struct ScrolingGrid_Previews: PreviewProvider {
+struct ScrollingGrid_Previews: PreviewProvider {
     static var previews: some View {
-        ScrolingGrid()
+        ScrollingGrid()
     }
 }
