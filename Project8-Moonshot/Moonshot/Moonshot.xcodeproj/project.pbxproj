@@ -23,6 +23,8 @@
 		4C673D782A125F7700C045F1 /* NewViewWithNavigationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C673D772A125F7700C045F1 /* NewViewWithNavigationView.swift */; };
 		4C673D7A2A1261DC00C045F1 /* HierarchicalCodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C673D792A1261DC00C045F1 /* HierarchicalCodable.swift */; };
 		4C673D7C2A12642200C045F1 /* ScrollingGrid.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C673D7B2A12642200C045F1 /* ScrollingGrid.swift */; };
+		4CB2A9DB2A18BE0E003B77C7 /* MissionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CB2A9DA2A18BE0E003B77C7 /* MissionView.swift */; };
+		4CB2A9DD2A18C774003B77C7 /* AstronautView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CB2A9DC2A18C774003B77C7 /* AstronautView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,6 +45,8 @@
 		4C673D772A125F7700C045F1 /* NewViewWithNavigationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewViewWithNavigationView.swift; sourceTree = "<group>"; };
 		4C673D792A1261DC00C045F1 /* HierarchicalCodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HierarchicalCodable.swift; sourceTree = "<group>"; };
 		4C673D7B2A12642200C045F1 /* ScrollingGrid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollingGrid.swift; sourceTree = "<group>"; };
+		4CB2A9DA2A18BE0E003B77C7 /* MissionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MissionView.swift; sourceTree = "<group>"; };
+		4CB2A9DC2A18C774003B77C7 /* AstronautView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AstronautView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,6 +79,7 @@
 		4C4FA05F2A10D361003FBF12 /* Moonshot */ = {
 			isa = PBXGroup;
 			children = (
+				4CB2A9D92A18BDD3003B77C7 /* Tutorials */,
 				4C4FA0602A10D361003FBF12 /* MoonshotApp.swift */,
 				4C4FA0622A10D361003FBF12 /* ContentView.swift */,
 				4C4309802A14BD2900D5CD62 /* astronauts.json */,
@@ -82,15 +87,11 @@
 				4C43097F2A14BD2900D5CD62 /* missions.json */,
 				4C4FA0642A10D362003FBF12 /* Assets.xcassets */,
 				4C4FA0662A10D362003FBF12 /* Preview Content */,
-				4C4FA06E2A10D5AF003FBF12 /* ImageGeometryReader.swift */,
-				4C673D752A125CCA00C045F1 /* ScrollViewWithScrollingData.swift */,
-				4C673D772A125F7700C045F1 /* NewViewWithNavigationView.swift */,
-				4C673D792A1261DC00C045F1 /* HierarchicalCodable.swift */,
-				4C673D7B2A12642200C045F1 /* ScrollingGrid.swift */,
 				4C4309852A14C0EE00D5CD62 /* Bundle-Decodable.swift */,
 				4C4309872A14C83800D5CD62 /* Misson.swift */,
 				4C4309892A14CFA100D5CD62 /* Color-Theme.swift */,
 				4C43098B2A14D06500D5CD62 /* MissionItem.swift */,
+				4CB2A9DC2A18C774003B77C7 /* AstronautView.swift */,
 			);
 			path = Moonshot;
 			sourceTree = "<group>";
@@ -101,6 +102,19 @@
 				4C4FA0672A10D362003FBF12 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		4CB2A9D92A18BDD3003B77C7 /* Tutorials */ = {
+			isa = PBXGroup;
+			children = (
+				4C673D752A125CCA00C045F1 /* ScrollViewWithScrollingData.swift */,
+				4C4FA06E2A10D5AF003FBF12 /* ImageGeometryReader.swift */,
+				4C673D772A125F7700C045F1 /* NewViewWithNavigationView.swift */,
+				4C673D792A1261DC00C045F1 /* HierarchicalCodable.swift */,
+				4C673D7B2A12642200C045F1 /* ScrollingGrid.swift */,
+				4CB2A9DA2A18BE0E003B77C7 /* MissionView.swift */,
+			);
+			path = Tutorials;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -175,6 +189,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4CB2A9DD2A18C774003B77C7 /* AstronautView.swift in Sources */,
 				4C4309882A14C83800D5CD62 /* Misson.swift in Sources */,
 				4C43098C2A14D06500D5CD62 /* MissionItem.swift in Sources */,
 				4C673D7C2A12642200C045F1 /* ScrollingGrid.swift in Sources */,
@@ -182,6 +197,7 @@
 				4C673D782A125F7700C045F1 /* NewViewWithNavigationView.swift in Sources */,
 				4C673D762A125CCA00C045F1 /* ScrollViewWithScrollingData.swift in Sources */,
 				4C4309842A14BDC000D5CD62 /* Astronaut.swift in Sources */,
+				4CB2A9DB2A18BE0E003B77C7 /* MissionView.swift in Sources */,
 				4C4FA0632A10D361003FBF12 /* ContentView.swift in Sources */,
 				4C4309862A14C0EE00D5CD62 /* Bundle-Decodable.swift in Sources */,
 				4C4FA06F2A10D5AF003FBF12 /* ImageGeometryReader.swift in Sources */,
