@@ -10,13 +10,19 @@ import SwiftUI
 struct ContentView: View {
     let astronauts: [String: Astronaut] = Bundle.main.decode("astronauts.json")
     let missions: [Mission] = Bundle.main.decode("missions.json")
-    
+
     // adaptive: squeeze as many as possible columns to
     // fit the the screen with respect to minimum size
-    let columns = [
-        GridItem(.adaptive(minimum: 150))
-    ]
-    
+//    let columns = [
+//        GridItem(.adaptive(minimum: 150))
+//    ]
+    @State private var showGrid = true
+    var columns: [GridItem] {
+        [
+            GridItem(.adaptive(minimum: showGrid ? 150 : .infinity))
+        ]
+    }
+
     // shift + command + a -> light/dark toggle
     var body: some View {
         NavigationView {
@@ -31,15 +37,26 @@ struct ContentView: View {
                                 missionName: mission.displayName,
                                 missionDate: mission.formattedLaunchDate
                             )
-                            
                         }
                     }
                 }
                 .padding([.horizontal, .bottom])
             }
+            .toolbar {
+                ToolbarItem {
+                    Button {
+                        showGrid.toggle()
+                    } label: {
+                        Image(showGrid ? "ic_list" : "ic_grid")
+                            .renderingMode(.template)
+                            .foregroundColor(.white)
+                    }
+                }
+            }
             .navigationTitle("Moonshot")
             .background(.darkBackground)
             .preferredColorScheme(.dark)
+            .animation(.default, value: showGrid)
         }
     }
 }
