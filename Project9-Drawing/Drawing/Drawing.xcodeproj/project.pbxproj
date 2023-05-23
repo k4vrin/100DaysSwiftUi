@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4C74D23E2A1CE3A30068DD44 /* CreativeBorders.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C74D23D2A1CE3A30068DD44 /* CreativeBorders.swift */; };
+		4C74D2402A1CE5760068DD44 /* MetalDrawingGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C74D23F2A1CE5760068DD44 /* MetalDrawingGroup.swift */; };
+		4CBDA0012A1CA3D8009F05F5 /* CGAffineTransformAndShapes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CBDA0002A1CA3D8009F05F5 /* CGAffineTransformAndShapes.swift */; };
 		4CC8E8312A1B512900880AFD /* DrawingApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CC8E8302A1B512900880AFD /* DrawingApp.swift */; };
 		4CC8E8332A1B512900880AFD /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CC8E8322A1B512900880AFD /* ContentView.swift */; };
 		4CC8E8352A1B512A00880AFD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4CC8E8342A1B512A00880AFD /* Assets.xcassets */; };
@@ -17,6 +20,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4C74D23D2A1CE3A30068DD44 /* CreativeBorders.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreativeBorders.swift; sourceTree = "<group>"; };
+		4C74D23F2A1CE5760068DD44 /* MetalDrawingGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetalDrawingGroup.swift; sourceTree = "<group>"; };
+		4CBDA0002A1CA3D8009F05F5 /* CGAffineTransformAndShapes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CGAffineTransformAndShapes.swift; sourceTree = "<group>"; };
 		4CC8E82D2A1B512900880AFD /* Drawing.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Drawing.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4CC8E8302A1B512900880AFD /* DrawingApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawingApp.swift; sourceTree = "<group>"; };
 		4CC8E8322A1B512900880AFD /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -57,6 +63,8 @@
 		4CC8E82F2A1B512900880AFD /* Drawing */ = {
 			isa = PBXGroup;
 			children = (
+				4C74D23D2A1CE3A30068DD44 /* CreativeBorders.swift */,
+				4C74D23F2A1CE5760068DD44 /* MetalDrawingGroup.swift */,
 				4CC8E8302A1B512900880AFD /* DrawingApp.swift */,
 				4CC8E8322A1B512900880AFD /* ContentView.swift */,
 				4CC8E8342A1B512A00880AFD /* Assets.xcassets */,
@@ -64,6 +72,7 @@
 				4CC8E83E2A1B569B00880AFD /* CustomPath.swift */,
 				4CC8E8402A1B59C200880AFD /* PathVsShapes.swift */,
 				4CC8E8422A1B5F2400880AFD /* StrokeWithInsettableShape.swift */,
+				4CBDA0002A1CA3D8009F05F5 /* CGAffineTransformAndShapes.swift */,
 			);
 			path = Drawing;
 			sourceTree = "<group>";
@@ -146,10 +155,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4C74D23E2A1CE3A30068DD44 /* CreativeBorders.swift in Sources */,
 				4CC8E8432A1B5F2400880AFD /* StrokeWithInsettableShape.swift in Sources */,
 				4CC8E83F2A1B569B00880AFD /* CustomPath.swift in Sources */,
+				4CBDA0012A1CA3D8009F05F5 /* CGAffineTransformAndShapes.swift in Sources */,
 				4CC8E8332A1B512900880AFD /* ContentView.swift in Sources */,
 				4CC8E8312A1B512900880AFD /* DrawingApp.swift in Sources */,
+				4C74D2402A1CE5760068DD44 /* MetalDrawingGroup.swift in Sources */,
 				4CC8E8412A1B59C200880AFD /* PathVsShapes.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
