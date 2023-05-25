@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4C112BB22A1F4C23003A12E1 /* SpecialEffects.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C112BB12A1F4C23003A12E1 /* SpecialEffects.swift */; };
+		4C112BB42A1F56A0003A12E1 /* ShapeWithAnimatableData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C112BB32A1F56A0003A12E1 /* ShapeWithAnimatableData.swift */; };
+		4C112BB62A1F5EEA003A12E1 /* ShapeWithAnimatablePair.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C112BB52A1F5EEA003A12E1 /* ShapeWithAnimatablePair.swift */; };
 		4C74D23E2A1CE3A30068DD44 /* CreativeBorders.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C74D23D2A1CE3A30068DD44 /* CreativeBorders.swift */; };
 		4C74D2402A1CE5760068DD44 /* MetalDrawingGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C74D23F2A1CE5760068DD44 /* MetalDrawingGroup.swift */; };
 		4CBDA0012A1CA3D8009F05F5 /* CGAffineTransformAndShapes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CBDA0002A1CA3D8009F05F5 /* CGAffineTransformAndShapes.swift */; };
@@ -20,6 +23,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4C112BB12A1F4C23003A12E1 /* SpecialEffects.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpecialEffects.swift; sourceTree = "<group>"; };
+		4C112BB32A1F56A0003A12E1 /* ShapeWithAnimatableData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShapeWithAnimatableData.swift; sourceTree = "<group>"; };
+		4C112BB52A1F5EEA003A12E1 /* ShapeWithAnimatablePair.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShapeWithAnimatablePair.swift; sourceTree = "<group>"; };
 		4C74D23D2A1CE3A30068DD44 /* CreativeBorders.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreativeBorders.swift; sourceTree = "<group>"; };
 		4C74D23F2A1CE5760068DD44 /* MetalDrawingGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetalDrawingGroup.swift; sourceTree = "<group>"; };
 		4CBDA0002A1CA3D8009F05F5 /* CGAffineTransformAndShapes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CGAffineTransformAndShapes.swift; sourceTree = "<group>"; };
@@ -73,6 +79,9 @@
 				4CC8E8402A1B59C200880AFD /* PathVsShapes.swift */,
 				4CC8E8422A1B5F2400880AFD /* StrokeWithInsettableShape.swift */,
 				4CBDA0002A1CA3D8009F05F5 /* CGAffineTransformAndShapes.swift */,
+				4C112BB12A1F4C23003A12E1 /* SpecialEffects.swift */,
+				4C112BB32A1F56A0003A12E1 /* ShapeWithAnimatableData.swift */,
+				4C112BB52A1F5EEA003A12E1 /* ShapeWithAnimatablePair.swift */,
 			);
 			path = Drawing;
 			sourceTree = "<group>";
@@ -158,9 +167,12 @@
 				4C74D23E2A1CE3A30068DD44 /* CreativeBorders.swift in Sources */,
 				4CC8E8432A1B5F2400880AFD /* StrokeWithInsettableShape.swift in Sources */,
 				4CC8E83F2A1B569B00880AFD /* CustomPath.swift in Sources */,
+				4C112BB42A1F56A0003A12E1 /* ShapeWithAnimatableData.swift in Sources */,
 				4CBDA0012A1CA3D8009F05F5 /* CGAffineTransformAndShapes.swift in Sources */,
 				4CC8E8332A1B512900880AFD /* ContentView.swift in Sources */,
+				4C112BB22A1F4C23003A12E1 /* SpecialEffects.swift in Sources */,
 				4CC8E8312A1B512900880AFD /* DrawingApp.swift in Sources */,
+				4C112BB62A1F5EEA003A12E1 /* ShapeWithAnimatablePair.swift in Sources */,
 				4C74D2402A1CE5760068DD44 /* MetalDrawingGroup.swift in Sources */,
 				4CC8E8412A1B59C200880AFD /* PathVsShapes.swift in Sources */,
 			);
