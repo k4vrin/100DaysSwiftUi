@@ -8,33 +8,33 @@
 import SwiftUI
 
 struct ContentView: View {
-    @StateObject var order = Order()
+    @StateObject var viewModel = ViewModel()
     
     var body: some View {
         NavigationView {
             Form {
                 Section {
-                    Picker("Select your cake type", selection: $order.type) {
-                        ForEach(Order.types.indices) {
-                            Text(Order.types[$0])
+                    Picker("Select your cake type", selection: $viewModel.state.order.type) {
+                        ForEach(ViewModel.types.indices) {
+                            Text(ViewModel.types[$0])
                         }
                     }
                     
-                    Stepper("Number of cakes: \(order.quantity)", value: $order.quantity, in: 3...20)
+                    Stepper("Number of cakes: \(viewModel.state.order.quantity)", value: $viewModel.state.order.quantity, in: 3...20)
                 }
                 
                 Section {
-                    Toggle("Any special requests?", isOn: $order.specialRequestEnable.animation())
+                    Toggle("Any special requests?", isOn: $viewModel.state.specialRequestEnable.animation())
                     
-                    if order.specialRequestEnable {
-                        Toggle("Add extra frosting", isOn: $order.extraFrosting)
-                        Toggle("Add extra sprinkles", isOn: $order.addSprinkles)
+                    if viewModel.state.specialRequestEnable {
+                        Toggle("Add extra frosting", isOn: $viewModel.state.order.extraFrosting)
+                        Toggle("Add extra sprinkles", isOn: $viewModel.state.order.addSprinkles)
                     }
                 }
                 
                 Section {
                     NavigationLink {
-                        AddressView(order: order)
+                        AddressView(viewModel: viewModel)
                     } label : {
                         Text("Delivery detail")
                     }
