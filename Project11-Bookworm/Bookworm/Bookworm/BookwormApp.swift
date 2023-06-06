@@ -9,7 +9,7 @@ import SwiftUI
 
 @main
 struct BookwormApp: App {
-    @StateObject private var dataController = DataController()
+    @StateObject private var dataController = DataManager()
     
     var body: some Scene {
         WindowGroup {
