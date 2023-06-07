@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4C0C236B2A307DB200BE9DAB /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C0C236A2A307DB200BE9DAB /* DetailView.swift */; };
 		4CB319A72A2DCE37004E85C2 /* BookwormApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CB319A62A2DCE37004E85C2 /* BookwormApp.swift */; };
 		4CB319A92A2DCE37004E85C2 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CB319A82A2DCE37004E85C2 /* ContentView.swift */; };
 		4CB319AB2A2DCE38004E85C2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4CB319AA2A2DCE38004E85C2 /* Assets.xcassets */; };
@@ -24,6 +25,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4C0C236A2A307DB200BE9DAB /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
 		4CB319A32A2DCE37004E85C2 /* Bookworm.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bookworm.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4CB319A62A2DCE37004E85C2 /* BookwormApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookwormApp.swift; sourceTree = "<group>"; };
 		4CB319A82A2DCE37004E85C2 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -74,13 +76,14 @@
 				4CB319B42A2DCE7C004E85C2 /* Tutorial */,
 				4CB319A62A2DCE37004E85C2 /* BookwormApp.swift */,
 				4CB319A82A2DCE37004E85C2 /* ContentView.swift */,
-				4CB319AA2A2DCE38004E85C2 /* Assets.xcassets */,
-				4CB319AC2A2DCE38004E85C2 /* Preview Content */,
 				4CDD0F592A2F2A47002F263B /* DataManager.swift */,
-				4CDD0F5B2A2F2B45002F263B /* Bookworm2.xcdatamodeld */,
 				4CDD0F5E2A2F3582002F263B /* AddBookView.swift */,
 				4CDD0F602A2F3EA7002F263B /* RatingView.swift */,
 				4CDD0F622A2F4127002F263B /* EmojiRatingView.swift */,
+				4C0C236A2A307DB200BE9DAB /* DetailView.swift */,
+				4CDD0F5B2A2F2B45002F263B /* Bookworm2.xcdatamodeld */,
+				4CB319AA2A2DCE38004E85C2 /* Assets.xcassets */,
+				4CB319AC2A2DCE38004E85C2 /* Preview Content */,
 			);
 			path = Bookworm;
 			sourceTree = "<group>";
@@ -182,6 +185,7 @@
 				4CDD0F632A2F4127002F263B /* EmojiRatingView.swift in Sources */,
 				4CDD0F5D2A2F2B45002F263B /* Bookworm2.xcdatamodeld in Sources */,
 				4CDD0F5F2A2F3582002F263B /* AddBookView.swift in Sources */,
+				4C0C236B2A307DB200BE9DAB /* DetailView.swift in Sources */,
 				4CB319BD2A2DE8BD004E85C2 /* Bookworm.xcdatamodeld in Sources */,
 				4CB319BA2A2DE75F004E85C2 /* CoreDataWithSwiftUi.swift in Sources */,
 				4CB319A72A2DCE37004E85C2 /* BookwormApp.swift in Sources */,
