@@ -40,6 +40,9 @@ struct DetailView: View {
             
             RatingView(rating: .constant(Int(book.rating)))
                 .font(.largeTitle)
+            
+            Text("Added: \(book.date?.formatted(date: .abbreviated, time: .omitted) ?? "N/A")")
+                .padding()
         }
         .navigationTitle(book.title ?? "Unknow book")
         .navigationBarTitleDisplayMode(.inline)
@@ -60,7 +63,7 @@ struct DetailView: View {
     
     func deleteBook() {
         moc.delete(book)
-//        try? moc.save()
+        try? moc.save()
         dismiss()
         
     }

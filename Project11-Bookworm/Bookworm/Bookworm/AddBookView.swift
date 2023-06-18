@@ -15,7 +15,10 @@ struct AddBookView: View {
     @State private var author = ""
     @State private var review = ""
     @State private var rating = 3
-    @State private var genre = ""
+    @State private var genre = "Fantasy"
+    private var isSaveEnable: Bool {
+        self.title.isBlank() || self.author.isBlank()
+    }
     
     let genres = ["Fantasy", "Horor", "Kids", "Mystery", "Poetry", "Romance", "Thriller"]
     
@@ -27,8 +30,8 @@ struct AddBookView: View {
                     TextField("Author's name", text: $author)
                     
                     Picker("Genre", selection: $genre) {
-                        ForEach(genres, id: \.self) {
-                            Text($0)
+                        ForEach(genres, id: \.self) { genre in
+                            Text(genre)
                         }
                     }
                 }
@@ -50,20 +53,31 @@ struct AddBookView: View {
                         newBook.rating = Int16(rating)
                         newBook.genre = genre
                         newBook.review = review
+                        newBook.date = Date.now
                         
                         try? moc.save()
                         dismiss()
                     }
+                    .disabled(isSaveEnable)
                 }
             }
             .navigationTitle("Add Book")
             .animation(.default, value: rating)
         }
     }
+    
 }
 
 struct AddBook_Previews: PreviewProvider {
     static var previews: some View {
         AddBookView()
+    }
+}
+
+extension String {
+    func isBlank() -> Bool {
+        self.isEmpty || self.allSatisfy { ch in
+            ch.isWhitespace
+        }
     }
 }
