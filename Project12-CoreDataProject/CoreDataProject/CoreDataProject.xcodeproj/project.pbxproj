@@ -14,10 +14,10 @@
 		4C471B3F2A4055750057C306 /* CoreDataProject.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4C471B3D2A4055750057C306 /* CoreDataProject.xcdatamodeld */; };
 		4C471B412A40558E0057C306 /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C471B402A40558E0057C306 /* DataController.swift */; };
 		4C471B472A405B760057C306 /* HashableItems.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C471B462A405B760057C306 /* HashableItems.swift */; };
-		4C471B4A2A405E760057C306 /* Movie+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C471B482A405E760057C306 /* Movie+CoreDataClass.swift */; };
-		4C471B4B2A405E760057C306 /* Movie+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C471B492A405E760057C306 /* Movie+CoreDataProperties.swift */; };
 		4C471B4E2A4062350057C306 /* ConditionalSaving.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C471B4D2A4062350057C306 /* ConditionalSaving.swift */; };
 		4C471B502A4062C70057C306 /* UniqueObjects.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C471B4F2A4062C70057C306 /* UniqueObjects.swift */; };
+		4C515C4A2A485BF80076D3F4 /* Movie+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C515C482A485BF80076D3F4 /* Movie+CoreDataClass.swift */; };
+		4C515C4B2A485BF80076D3F4 /* Movie+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C515C492A485BF80076D3F4 /* Movie+CoreDataProperties.swift */; };
 		4C517D542A43467900617FB0 /* Singer+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C517D522A43467900617FB0 /* Singer+CoreDataClass.swift */; };
 		4C517D552A43467900617FB0 /* Singer+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C517D532A43467900617FB0 /* Singer+CoreDataProperties.swift */; };
 		4C517D572A4347E700617FB0 /* FilteredList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C517D562A4347E700617FB0 /* FilteredList.swift */; };
@@ -40,10 +40,10 @@
 		4C471B3E2A4055750057C306 /* CoreDataProject.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CoreDataProject.xcdatamodel; sourceTree = "<group>"; };
 		4C471B402A40558E0057C306 /* DataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataController.swift; sourceTree = "<group>"; };
 		4C471B462A405B760057C306 /* HashableItems.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HashableItems.swift; sourceTree = "<group>"; };
-		4C471B482A405E760057C306 /* Movie+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Movie+CoreDataClass.swift"; sourceTree = SOURCE_ROOT; };
-		4C471B492A405E760057C306 /* Movie+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Movie+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
 		4C471B4D2A4062350057C306 /* ConditionalSaving.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConditionalSaving.swift; sourceTree = "<group>"; };
 		4C471B4F2A4062C70057C306 /* UniqueObjects.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UniqueObjects.swift; sourceTree = "<group>"; };
+		4C515C482A485BF80076D3F4 /* Movie+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Movie+CoreDataClass.swift"; sourceTree = SOURCE_ROOT; };
+		4C515C492A485BF80076D3F4 /* Movie+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Movie+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
 		4C517D522A43467900617FB0 /* Singer+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Singer+CoreDataClass.swift"; sourceTree = "<group>"; };
 		4C517D532A43467900617FB0 /* Singer+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Singer+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		4C517D562A4347E700617FB0 /* FilteredList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilteredList.swift; sourceTree = "<group>"; };
@@ -86,14 +86,14 @@
 		4C471B2D2A4055230057C306 /* CoreDataProject */ = {
 			isa = PBXGroup;
 			children = (
+				4C515C482A485BF80076D3F4 /* Movie+CoreDataClass.swift */,
+				4C515C492A485BF80076D3F4 /* Movie+CoreDataProperties.swift */,
 				4C517D5A2A434FFD00617FB0 /* Country+CoreDataClass.swift */,
 				4C517D5B2A434FFD00617FB0 /* Country+CoreDataProperties.swift */,
 				4C517D5C2A434FFD00617FB0 /* Candy+CoreDataClass.swift */,
 				4C517D5D2A434FFD00617FB0 /* Candy+CoreDataProperties.swift */,
 				4C517D522A43467900617FB0 /* Singer+CoreDataClass.swift */,
 				4C517D532A43467900617FB0 /* Singer+CoreDataProperties.swift */,
-				4C471B482A405E760057C306 /* Movie+CoreDataClass.swift */,
-				4C471B492A405E760057C306 /* Movie+CoreDataProperties.swift */,
 				4C471B2E2A4055230057C306 /* CoreDataProjectApp.swift */,
 				4C471B302A4055230057C306 /* ContentView.swift */,
 				4C471B322A4055240057C306 /* Assets.xcassets */,
@@ -194,14 +194,13 @@
 				4C471B312A4055230057C306 /* ContentView.swift in Sources */,
 				4C53FC2B2A43305D00B720A1 /* DynamicllyFiltering.swift in Sources */,
 				4C471B472A405B760057C306 /* HashableItems.swift in Sources */,
+				4C515C4A2A485BF80076D3F4 /* Movie+CoreDataClass.swift in Sources */,
 				4C471B412A40558E0057C306 /* DataController.swift in Sources */,
 				4C53FC292A432CF600B720A1 /* FilteringFetchRequest.swift in Sources */,
 				4C517D572A4347E700617FB0 /* FilteredList.swift in Sources */,
 				4C517D542A43467900617FB0 /* Singer+CoreDataClass.swift in Sources */,
 				4C471B2F2A4055230057C306 /* CoreDataProjectApp.swift in Sources */,
 				4C517D5F2A434FFD00617FB0 /* Country+CoreDataProperties.swift in Sources */,
-				4C471B4A2A405E760057C306 /* Movie+CoreDataClass.swift in Sources */,
-				4C471B4B2A405E760057C306 /* Movie+CoreDataProperties.swift in Sources */,
 				4C517D612A434FFD00617FB0 /* Candy+CoreDataProperties.swift in Sources */,
 				4C471B502A4062C70057C306 /* UniqueObjects.swift in Sources */,
 				4C471B4E2A4062350057C306 /* ConditionalSaving.swift in Sources */,
@@ -209,6 +208,7 @@
 				4C517D5E2A434FFD00617FB0 /* Country+CoreDataClass.swift in Sources */,
 				4C471B3F2A4055750057C306 /* CoreDataProject.xcdatamodeld in Sources */,
 				4C517D602A434FFD00617FB0 /* Candy+CoreDataClass.swift in Sources */,
+				4C515C4B2A485BF80076D3F4 /* Movie+CoreDataProperties.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
