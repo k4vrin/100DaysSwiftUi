@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2fb58161-e5ce-4de7-a91e-4f2042c95a7d" name="Changes" comment="Finish Day 61" />
+    <list default="true" id="2fb58161-e5ce-4de7-a91e-4f2042c95a7d" name="Changes" comment="Finish Day 62" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -25,6 +25,7 @@
     <option name="onto" value="c6494d5f16a428db4cd03d893a373093400eb017" />
   </component>
   <component name="GitToolBoxStore">
+    <option name="projectConfigVersion" value="5" />
     <option name="recentBranches">
       <RecentBranches>
         <option name="branchesForRepo">
@@ -113,7 +114,14 @@
       <option name="project" value="LOCAL" />
       <updated>1688456527593</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Finish Day 62">
+      <created>1688459472448</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1688459472448</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -141,6 +149,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Finish Day 61" />
-    <option name="LAST_COMMIT_MESSAGE" value="Finish Day 61" />
+    <MESSAGE value="Finish Day 62" />
+    <option name="LAST_COMMIT_MESSAGE" value="Finish Day 62" />
   </component>
 </project>
