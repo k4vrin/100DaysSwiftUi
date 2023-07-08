@@ -10,6 +10,7 @@ import SwiftUI
 struct WrappingUIViewController: View {
     
     @State private var image: Image?
+    @State private var inputImage: UIImage?
     @State private var showImagePicker = false
     
     var body: some View {
@@ -21,10 +22,28 @@ struct WrappingUIViewController: View {
             Button("Select Image") {
                 showImagePicker = true
             }
+            
+            Button("Save Image") {
+                saveImage()
+            }
         }
         .sheet(isPresented: $showImagePicker) {
-            ImagePicker()
+            ImagePicker(image: $inputImage)
         }
+        .onChange(of: inputImage) { inputImg in
+            loadImage()
+        }
+    }
+    
+    func loadImage() {
+        guard let inputImage = inputImage else {return}
+        image = Image(uiImage: inputImage)
+    }
+    
+    func saveImage() {
+        guard let inputImage = inputImage else {return}
+        let imageSaver = ImageSaver()
+        imageSaver.writeToPhotoAlbum(image: inputImage)
     }
 }
 
