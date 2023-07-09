@@ -17,6 +17,7 @@
 		4C68E7EE2A54064700090FA3 /* PropertyWrapperStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C68E7ED2A54064700090FA3 /* PropertyWrapperStruct.swift */; };
 		4C68E7F02A540B4000090FA3 /* ConfirmationDialogAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C68E7EF2A540B4000090FA3 /* ConfirmationDialogAlert.swift */; };
 		4CE864C82A598C0000F3F855 /* ImageSaver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CE864C72A598C0000F3F855 /* ImageSaver.swift */; };
+		4CF489882A5ABA7000F9AF85 /* NewPhotoPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CF489872A5ABA7000F9AF85 /* NewPhotoPicker.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		4C68E7ED2A54064700090FA3 /* PropertyWrapperStruct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PropertyWrapperStruct.swift; sourceTree = "<group>"; };
 		4C68E7EF2A540B4000090FA3 /* ConfirmationDialogAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmationDialogAlert.swift; sourceTree = "<group>"; };
 		4CE864C72A598C0000F3F855 /* ImageSaver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageSaver.swift; sourceTree = "<group>"; };
+		4CF489872A5ABA7000F9AF85 /* NewPhotoPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPhotoPicker.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,6 +93,7 @@
 				4C4342532A555BCD001D34E5 /* WrappingUIViewController.swift */,
 				4C4342552A555E1A001D34E5 /* ImagePicker.swift */,
 				4CE864C72A598C0000F3F855 /* ImageSaver.swift */,
+				4CF489872A5ABA7000F9AF85 /* NewPhotoPicker.swift */,
 			);
 			path = Tutorial;
 			sourceTree = "<group>";
@@ -170,6 +173,7 @@
 				4C4342522A555560001D34E5 /* IntegratingCoreImage.swift in Sources */,
 				4C4342562A555E1A001D34E5 /* ImagePicker.swift in Sources */,
 				4C68E7EE2A54064700090FA3 /* PropertyWrapperStruct.swift in Sources */,
+				4CF489882A5ABA7000F9AF85 /* NewPhotoPicker.swift in Sources */,
 				4C4342542A555BCD001D34E5 /* WrappingUIViewController.swift in Sources */,
 				4C68E7DE2A5405C700090FA3 /* InstaFilterApp.swift in Sources */,
 				4CE864C82A598C0000F3F855 /* ImageSaver.swift in Sources */,
