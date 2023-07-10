@@ -8,6 +8,10 @@
 import UIKit
 
 class ImageSaver: NSObject {
+    
+    var successHandler: (() -> Void)?
+    var errorHandler: ((Error) -> Void)?
+    
     func writeToPhotoAlbum(image: UIImage) {
         UIImageWriteToSavedPhotosAlbum(
             image,
@@ -23,6 +27,10 @@ class ImageSaver: NSObject {
     
     // objc: code that can be read by objective c
     @objc func saveCompleted(_ image: UIImage, didFinishSavingWithError error: Error?, contextInfo: UnsafeRawPointer) {
-        print("Save finished")
+        if let error = error {
+            errorHandler?(error)
+        } else {
+            successHandler?()
+        }
     }
 }
