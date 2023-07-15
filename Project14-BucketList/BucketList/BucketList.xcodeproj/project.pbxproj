@@ -15,6 +15,8 @@
 		4C0490782A5E96C000A510A5 /* WriteToDocuments.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C0490772A5E96C000A510A5 /* WriteToDocuments.swift */; };
 		4C04907A2A5E9DCD00A510A5 /* FileManager_Decodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C0490792A5E9DCD00A510A5 /* FileManager_Decodable.swift */; };
 		4C04907C2A5EA36700A510A5 /* ChangeViewWEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C04907B2A5EA36700A510A5 /* ChangeViewWEnum.swift */; };
+		4C42FF772A62D93100710AFB /* IntegratingMapKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C42FF762A62D93100710AFB /* IntegratingMapKit.swift */; };
+		4C42FF792A62DC9B00710AFB /* TouchIDOrFaceID.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C42FF782A62DC9B00710AFB /* TouchIDOrFaceID.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +30,8 @@
 		4C0490772A5E96C000A510A5 /* WriteToDocuments.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WriteToDocuments.swift; sourceTree = "<group>"; };
 		4C0490792A5E9DCD00A510A5 /* FileManager_Decodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileManager_Decodable.swift; sourceTree = "<group>"; };
 		4C04907B2A5EA36700A510A5 /* ChangeViewWEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeViewWEnum.swift; sourceTree = "<group>"; };
+		4C42FF762A62D93100710AFB /* IntegratingMapKit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntegratingMapKit.swift; sourceTree = "<group>"; };
+		4C42FF782A62DC9B00710AFB /* TouchIDOrFaceID.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TouchIDOrFaceID.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +73,8 @@
 				4C0490772A5E96C000A510A5 /* WriteToDocuments.swift */,
 				4C0490792A5E9DCD00A510A5 /* FileManager_Decodable.swift */,
 				4C04907B2A5EA36700A510A5 /* ChangeViewWEnum.swift */,
+				4C42FF762A62D93100710AFB /* IntegratingMapKit.swift */,
+				4C42FF782A62DC9B00710AFB /* TouchIDOrFaceID.swift */,
 			);
 			path = BucketList;
 			sourceTree = "<group>";
@@ -156,6 +162,8 @@
 				4C04907A2A5E9DCD00A510A5 /* FileManager_Decodable.swift in Sources */,
 				4C0490672A5E90AB00A510A5 /* BucketListApp.swift in Sources */,
 				4C0490762A5E968E00A510A5 /* ComparableCustomStruct.swift in Sources */,
+				4C42FF792A62DC9B00710AFB /* TouchIDOrFaceID.swift in Sources */,
+				4C42FF772A62D93100710AFB /* IntegratingMapKit.swift in Sources */,
 				4C04907C2A5EA36700A510A5 /* ChangeViewWEnum.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -285,6 +293,7 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSFaceIDUsageDescription = "";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
@@ -323,6 +332,7 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSFaceIDUsageDescription = "";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
