@@ -19,6 +19,7 @@
 		4C28ACE92A63D025000378A3 /* EditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C28ACE82A63D025000378A3 /* EditView.swift */; };
 		4C42FF772A62D93100710AFB /* IntegratingMapKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C42FF762A62D93100710AFB /* IntegratingMapKit.swift */; };
 		4C42FF792A62DC9B00710AFB /* TouchIDOrFaceID.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C42FF782A62DC9B00710AFB /* TouchIDOrFaceID.swift */; };
+		4CCDD9C42A6534C000EF9AB3 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CCDD9C32A6534C000EF9AB3 /* Result.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		4C28ACE82A63D025000378A3 /* EditView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditView.swift; sourceTree = "<group>"; };
 		4C42FF762A62D93100710AFB /* IntegratingMapKit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntegratingMapKit.swift; sourceTree = "<group>"; };
 		4C42FF782A62DC9B00710AFB /* TouchIDOrFaceID.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TouchIDOrFaceID.swift; sourceTree = "<group>"; };
+		4CCDD9C32A6534C000EF9AB3 /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,6 +72,7 @@
 			children = (
 				4C0490662A5E90AB00A510A5 /* BucketListApp.swift */,
 				4C0490682A5E90AB00A510A5 /* ContentView.swift */,
+				4CCDD9C32A6534C000EF9AB3 /* Result.swift */,
 				4C28ACE82A63D025000378A3 /* EditView.swift */,
 				4C28ACE62A63CAA8000378A3 /* Location.swift */,
 				4C04906A2A5E90AC00A510A5 /* Assets.xcassets */,
@@ -173,6 +176,7 @@
 				4C42FF792A62DC9B00710AFB /* TouchIDOrFaceID.swift in Sources */,
 				4C42FF772A62D93100710AFB /* IntegratingMapKit.swift in Sources */,
 				4C04907C2A5EA36700A510A5 /* ChangeViewWEnum.swift in Sources */,
+				4CCDD9C42A6534C000EF9AB3 /* Result.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
