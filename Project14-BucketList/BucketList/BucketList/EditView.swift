@@ -8,44 +8,52 @@
 import SwiftUI
 
 struct EditView: View {
-    enum LoadingState {
-        case loading, loaded, failed
-    }
     
     @Environment(\.dismiss) var dismiss
-    var location: Location
     var onSave: (Location) -> Void
+    @ObservedObject private var viewModel: ViewModel
     
     
-    @State private var name: String
-    @State private var description: String
-    
-    @State private var loadingState = LoadingState.loading
-    @State private var pages = [Page]()
     
     init(location: Location, onSave: @escaping (Location) -> Void) {
-        self.location = location
+        viewModel = ViewModel()
         self.onSave = onSave
-        
-        // underscore: https://stackoverflow.com/a/65209375/17946885
-        _name = State(initialValue: location.name)
-        _description = State(initialValue: location.description)
+        viewModel.updateLocation(location)
+        viewModel.updateName(location.name)
+        viewModel.updateDesc(location.description)
+        viewModel.fetchNearbyPlaces()
     }
     
     var body: some View {
         NavigationView {
             Form {
                 Section {
-                    TextField("Place name", text: $name)
-                    TextField("Description", text: $description)
+                    TextField(
+                        "Place name",
+                        text: Binding(
+                            get: {viewModel.state.name},
+                            set: { value, _ in
+                                viewModel.updateName(value)
+                            }
+                        )
+                    )
+                    TextField(
+                        "Description",
+                        text: Binding(
+                            get: {viewModel.state.desc},
+                            set: { value, _ in
+                                viewModel.updateDesc(value)
+                            }
+                        )
+                    )
                 }
                 
                 Section("Nearby…") {
-                    switch loadingState {
+                    switch viewModel.state.loadingState {
                     case .loading:
                         Text("Loading")
-                    case .loaded:
-                        ForEach(pages, id: \.pageid) { page in
+                    case .success:
+                        ForEach(viewModel.state.pages, id: \.pageid) { page in
                             Text(page.title)
                                 .font(.headline)
                             + Text(": ")
@@ -60,40 +68,22 @@ struct EditView: View {
             .navigationTitle("Place Details")
             .toolbar {
                 Button("Save") {
-                    var newLocation = location
-                    newLocation.id = UUID()
-                    newLocation.name = self.name
-                    newLocation.description = self.description
-                    onSave(newLocation)
+                    if var newLocation = viewModel.state.location {
+                        newLocation.id = UUID()
+                        newLocation.name = viewModel.state.name
+                        newLocation.description = viewModel.state.desc
+                        onSave(newLocation)
+                        
+                        dismiss()
+                    }
                     
-                    dismiss()
                 }
             }
-            .task {
-                await fetchNearbyPlaces()
-            }
+            
         }
     }
     
-    func fetchNearbyPlaces() async {
-        let urlString = "https://en.wikipedia.org/w/api.php?ggscoord=\(location.coordinate.latitude)%7C\(location.coordinate.longitude)&action=query&prop=coordinates%7Cpageimages%7Cpageterms&colimit=50&piprop=thumbnail&pithumbsize=500&pilimit=50&wbptterms=description&generator=geosearch&ggsradius=10000&ggslimit=50&format=json"
-        
-        guard let url = URL(string: urlString) else {
-            print("Bad URL \(urlString)")
-            return
-        }
-        
-        do {
-            let (data, _) = try await URLSession.shared.data(from: url)
-            let items = try JSONDecoder().decode(Result.self, from: data)
-            pages = items.query.pages.values.sorted()
-            loadingState = .loaded
-        } catch {
-            print("Failed network call: \(error.localizedDescription)")
-            loadingState = .failed
-        }
-
-    }
+    
 }
 
 struct EditView_Previews: PreviewProvider {

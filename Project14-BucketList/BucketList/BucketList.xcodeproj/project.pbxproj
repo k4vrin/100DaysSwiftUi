@@ -22,6 +22,7 @@
 		4CA00C1D2A668BAA004991D9 /* ContentView-ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CA00C1C2A668BAA004991D9 /* ContentView-ViewModel.swift */; };
 		4CA00C1F2A669AE9004991D9 /* FileManage-DocumentsDirectory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CA00C1E2A669AE9004991D9 /* FileManage-DocumentsDirectory.swift */; };
 		4CCDD9C42A6534C000EF9AB3 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CCDD9C32A6534C000EF9AB3 /* Result.swift */; };
+		4CF054DD2A67EB6000585F64 /* EditView-ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CF054DC2A67EB6000585F64 /* EditView-ViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +43,7 @@
 		4CA00C1C2A668BAA004991D9 /* ContentView-ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ContentView-ViewModel.swift"; sourceTree = "<group>"; };
 		4CA00C1E2A669AE9004991D9 /* FileManage-DocumentsDirectory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FileManage-DocumentsDirectory.swift"; sourceTree = "<group>"; };
 		4CCDD9C32A6534C000EF9AB3 /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
+		4CF054DC2A67EB6000585F64 /* EditView-ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "EditView-ViewModel.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,6 +92,7 @@
 				4C04907B2A5EA36700A510A5 /* ChangeViewWEnum.swift */,
 				4C42FF762A62D93100710AFB /* IntegratingMapKit.swift */,
 				4C42FF782A62DC9B00710AFB /* TouchIDOrFaceID.swift */,
+				4CF054DC2A67EB6000585F64 /* EditView-ViewModel.swift */,
 			);
 			path = BucketList;
 			sourceTree = "<group>";
@@ -175,6 +178,7 @@
 				4C0490692A5E90AB00A510A5 /* ContentView.swift in Sources */,
 				4CA00C1D2A668BAA004991D9 /* ContentView-ViewModel.swift in Sources */,
 				4C0490782A5E96C000A510A5 /* WriteToDocuments.swift in Sources */,
+				4CF054DD2A67EB6000585F64 /* EditView-ViewModel.swift in Sources */,
 				4C04907A2A5E9DCD00A510A5 /* FileManager_Decodable.swift in Sources */,
 				4C0490672A5E90AB00A510A5 /* BucketListApp.swift in Sources */,
 				4C28ACE72A63CAA8000378A3 /* Location.swift in Sources */,

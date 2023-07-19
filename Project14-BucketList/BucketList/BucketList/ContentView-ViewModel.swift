@@ -77,6 +77,7 @@ extension ContentView {
             save()
         }
         
+        
         func authenticate() {
             let context = LAContext()
             var error: NSError?
@@ -84,25 +85,36 @@ extension ContentView {
             if context.canEvaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, error: &error) {
                 let reason = "Please authenticate yourself to unlock your places."
                 
-                context.evaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, localizedReason: reason) { success, _ in
+                context.evaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, localizedReason: reason) { success, err in
                     if success {
                         Task { @MainActor in
                             self.state = self.state.changing {
                                 $0.isUnlocked = true
+                                $0.showAlert = false
                             }
                         }
                     } else {
-                        // error
+                        Task { @MainActor in
+                            self.state = self.state.changing {
+                                $0.authError = err?.localizedDescription
+                                $0.showAlert = true
+                            }
+                        }
                     }
                 }
             } else {
-                // no biometrics
+                self.state = self.state.changing {
+                    $0.authError = "Biometrics authentication is not enrolled"
+                    $0.showAlert = true
+                }
+                
             }
         }
     }
 }
 
 struct ContentState: Changeable {
+    
     var mapRegion = MKCoordinateRegion(
         center: CLLocationCoordinate2D(
             latitude: 50,
@@ -116,6 +128,8 @@ struct ContentState: Changeable {
     var locations: [Location] = []
     var selectedPlace: Location? = nil
     var isUnlocked: Bool = false
+    var authError: String? = nil
+    var showAlert: Bool = false
 }
 
 protocol Changeable {}

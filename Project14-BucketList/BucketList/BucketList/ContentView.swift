@@ -10,7 +10,7 @@ import SwiftUI
 
 struct ContentView: View {
     @StateObject private var viewModel = ViewModel()
-    
+
     var body: some View {
         if viewModel.state.isUnlocked {
             ZStack {
@@ -62,13 +62,13 @@ struct ContentView: View {
                             self.viewModel.addLocation()
                         } label: {
                             Image(systemName: "plus")
+                                .padding()
+                                .background(.black.opacity(0.75))
+                                .foregroundColor(.white)
+                                .font(.title)
+                                .clipShape(Circle())
+                                .padding(.trailing)
                         }
-                        .padding()
-                        .background(.black.opacity(0.75))
-                        .foregroundColor(.white)
-                        .font(.title)
-                        .clipShape(Circle())
-                        .padding(.trailing)
                     }
                 }
             }
@@ -90,6 +90,21 @@ struct ContentView: View {
             .background(.blue)
             .foregroundColor(.white)
             .clipShape(Capsule())
+            .alert(
+                "Authentication Error",
+                isPresented: Binding(
+                    get: {viewModel.state.showAlert},
+                    set: {value, _ in}
+                ),
+                actions: {
+                    Button("Ok") {}
+                },
+                message: {
+                    if let err = viewModel.state.authError {
+                        Text(err)
+                    }
+                }
+            )
         }
     }
 }
