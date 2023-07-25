@@ -33,6 +33,9 @@ struct ContentView: View {
                             Text(item.amount, format: currency)
                                 .foregroundColor(getAmountColor(of: item.amount))
                         }
+                        .accessibilityElement()
+                        .accessibilityLabel("Item \(item.name), amount \(item.amount.formatted(.currency(code: "USD")))")
+                        .accessibilityHint("Type: Business")
                     }
                     .onDelete(perform: { indexSet in
                         var ids = indexSet.map {
@@ -61,6 +64,9 @@ struct ContentView: View {
                             Text(item.amount, format: currency)
                                 .foregroundColor(getAmountColor(of: item.amount))
                         }
+                        .accessibilityElement()
+                        .accessibilityLabel("Item \(item.name), amount \(item.amount.formatted(.currency(code: "USD")))")
+                        .accessibilityHint("Type: Personal")
                     }
                     .onDelete(perform: { indexSet in
                         var ids = indexSet.map {

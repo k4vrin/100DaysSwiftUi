@@ -37,6 +37,9 @@ struct MissionItem: View {
             RoundedRectangle(cornerRadius: 10)
                 .stroke(.lightBackground)
         )
+        .accessibilityElement()
+        .accessibilityLabel("\(missionName) mission")
+        .accessibilityHint("Date: \(missionDate)")
     }
 }
 

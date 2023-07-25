@@ -33,6 +33,7 @@ struct MissionView: View {
                         .scaledToFit()
                         .frame(maxWidth: geometry.size.width * 0.6)
                         .padding(.top)
+                        .accessibilityLabel(mission.displayName)
                     
                     Text(mission.fullFormattedLaunchDate)
                         .font(.title.bold())

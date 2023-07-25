@@ -39,6 +39,9 @@ struct MissionCrewList: View {
                             }
                         }
                         .padding(.horizontal)
+                        .accessibilityElement()
+                        .accessibilityLabel(crewMember.astronaut.name)
+                        .accessibilityHint(crewMember.role)
                     }
                 }
             }
