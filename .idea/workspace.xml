@@ -4,7 +4,29 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2fb58161-e5ce-4de7-a91e-4f2042c95a7d" name="Changes" comment="Finish Day 62" />
+    <list default="true" id="2fb58161-e5ce-4de7-a91e-4f2042c95a7d" name="Changes" comment="Finish Day 62">
+      <change afterPath="$PROJECT_DIR$/Challenge6App-Picbel/Picbel/Picbel.xcodeproj/project.pbxproj" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Challenge6App-Picbel/Picbel/Picbel.xcodeproj/project.xcworkspace/contents.xcworkspacedata" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Challenge6App-Picbel/Picbel/Picbel.xcodeproj/project.xcworkspace/xcshareddata/IDEWorkspaceChecks.plist" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Challenge6App-Picbel/Picbel/Picbel.xcodeproj/project.xcworkspace/xcuserdata/kavrin.xcuserdatad/UserInterfaceState.xcuserstate" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Challenge6App-Picbel/Picbel/Picbel.xcodeproj/xcuserdata/kavrin.xcuserdatad/xcschemes/xcschememanagement.plist" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Challenge6App-Picbel/Picbel/Picbel/AddNewPictureView.swift" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Challenge6App-Picbel/Picbel/Picbel/Assets.xcassets/AccentColor.colorset/Contents.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Challenge6App-Picbel/Picbel/Picbel/Assets.xcassets/AppIcon.appiconset/Contents.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Challenge6App-Picbel/Picbel/Picbel/Assets.xcassets/Contents.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Challenge6App-Picbel/Picbel/Picbel/Assets.xcassets/nicolas-tissot-335096.imageset/Contents.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Challenge6App-Picbel/Picbel/Picbel/Assets.xcassets/nicolas-tissot-335096.imageset/nicolas-tissot-335096@2x.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Challenge6App-Picbel/Picbel/Picbel/Assets.xcassets/nicolas-tissot-335096.imageset/nicolas-tissot-335096@3x.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Challenge6App-Picbel/Picbel/Picbel/ContentView.swift" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Challenge6App-Picbel/Picbel/Picbel/ImagePicker.swift" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Challenge6App-Picbel/Picbel/Picbel/Picbel.entitlements" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Challenge6App-Picbel/Picbel/Picbel/PicbelApp.swift" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Challenge6App-Picbel/Picbel/Picbel/PicbelDataModel.xcdatamodeld/PicbelDataModel.xcdatamodel/contents" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Challenge6App-Picbel/Picbel/Picbel/Preview Content/Preview Assets.xcassets/Contents.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Challenge6App-Picbel/Picbel/PicbelEntity+CoreDataClass.swift" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Challenge6App-Picbel/Picbel/PicbelEntity+CoreDataProperties.swift" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -83,21 +105,6 @@
     &quot;settings.editor.selected.configurable&quot;: &quot;AndroidSdkUpdater&quot;
   }
 }</component>
-  <component name="RunManager">
-    <configuration default="true" type="JetRunConfigurationType">
-      <module name="100DaysSwiftUi" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
-      <module name="100DaysSwiftUi" />
-      <option name="filePath" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
