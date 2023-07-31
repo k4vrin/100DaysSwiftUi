@@ -5,5 +5,11 @@
         <attribute name="desc" optional="YES" attributeType="String"/>
         <attribute name="img_id" optional="YES" attributeType="String"/>
         <attribute name="name" optional="YES" attributeType="String"/>
+        <relationship name="location" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="PicLocation" inverseName="picbel" inverseEntity="PicLocation"/>
+    </entity>
+    <entity name="PicLocation" representedClassName="PicLocation" syncable="YES">
+        <attribute name="latitude" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="longitude" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <relationship name="picbel" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="PicbelEntity" inverseName="location" inverseEntity="PicbelEntity"/>
     </entity>
 </model>

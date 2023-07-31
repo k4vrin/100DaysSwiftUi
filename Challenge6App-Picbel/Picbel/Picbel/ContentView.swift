@@ -15,17 +15,24 @@ struct ContentView: View {
         VStack {
             FilteredList(
                 sortDesc: [NSSortDescriptor(key: "created_at", ascending: true)]
-            ) { (picbel: PicbelEntity) in
-                HStack {
-                    if let img = loadImg(picbel.img_id ?? "") {
-                        Image(uiImage: img)
-                            .resizable()
-                            .scaledToFit()
+            ) { (picbel: PicbelEntity, moc) in
+                NavigationLink {
+                    DetailScreen(
+                        picbel: picbel,
+                        moc: moc
+                    )
+                } label: {
+                    HStack {
+                        if let img = loadImg(picbel.img_id ?? "") {
+                            Image(uiImage: img)
+                                .resizable()
+                                .scaledToFit()
+                        }
+                        Text(picbel.name ?? "err")
+                            .foregroundColor(Color.black)
                     }
-                    Text(picbel.name ?? "err")
-                        .foregroundColor(Color.black)
+                    .frame(height: 56)
                 }
-                .frame(height: 56)
             }
         }
         .sheet(isPresented: $showSheet) {

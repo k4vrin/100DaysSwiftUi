@@ -5,27 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2fb58161-e5ce-4de7-a91e-4f2042c95a7d" name="Changes" comment="Finish Day 62">
-      <change afterPath="$PROJECT_DIR$/Challenge6App-Picbel/Picbel/Picbel.xcodeproj/project.pbxproj" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Challenge6App-Picbel/Picbel/Picbel.xcodeproj/project.xcworkspace/contents.xcworkspacedata" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Challenge6App-Picbel/Picbel/Picbel.xcodeproj/project.xcworkspace/xcshareddata/IDEWorkspaceChecks.plist" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Challenge6App-Picbel/Picbel/Picbel.xcodeproj/project.xcworkspace/xcuserdata/kavrin.xcuserdatad/UserInterfaceState.xcuserstate" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Challenge6App-Picbel/Picbel/Picbel.xcodeproj/xcuserdata/kavrin.xcuserdatad/xcschemes/xcschememanagement.plist" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Challenge6App-Picbel/Picbel/Picbel/AddNewPictureView.swift" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Challenge6App-Picbel/Picbel/Picbel/Assets.xcassets/AccentColor.colorset/Contents.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Challenge6App-Picbel/Picbel/Picbel/Assets.xcassets/AppIcon.appiconset/Contents.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Challenge6App-Picbel/Picbel/Picbel/Assets.xcassets/Contents.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Challenge6App-Picbel/Picbel/Picbel/Assets.xcassets/nicolas-tissot-335096.imageset/Contents.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Challenge6App-Picbel/Picbel/Picbel/Assets.xcassets/nicolas-tissot-335096.imageset/nicolas-tissot-335096@2x.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Challenge6App-Picbel/Picbel/Picbel/Assets.xcassets/nicolas-tissot-335096.imageset/nicolas-tissot-335096@3x.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Challenge6App-Picbel/Picbel/Picbel/ContentView.swift" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Challenge6App-Picbel/Picbel/Picbel/ImagePicker.swift" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Challenge6App-Picbel/Picbel/Picbel/Picbel.entitlements" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Challenge6App-Picbel/Picbel/Picbel/PicbelApp.swift" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Challenge6App-Picbel/Picbel/Picbel/PicbelDataModel.xcdatamodeld/PicbelDataModel.xcdatamodel/contents" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Challenge6App-Picbel/Picbel/Picbel/Preview Content/Preview Assets.xcassets/Contents.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Challenge6App-Picbel/Picbel/PicbelEntity+CoreDataClass.swift" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Challenge6App-Picbel/Picbel/PicbelEntity+CoreDataProperties.swift" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Challenge6App-Picbel/Picbel/Picbel/AddLocation.swift" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Challenge6App-Picbel/Picbel/Picbel/DetailScreen.swift" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Challenge6App-Picbel/Picbel/Picbel/LocationDelegate.swift" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Challenge6App-Picbel/Picbel/Picbel.xcodeproj/project.pbxproj" beforeDir="false" afterPath="$PROJECT_DIR$/Challenge6App-Picbel/Picbel/Picbel.xcodeproj/project.pbxproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Challenge6App-Picbel/Picbel/Picbel.xcodeproj/project.xcworkspace/xcuserdata/kavrin.xcuserdatad/UserInterfaceState.xcuserstate" beforeDir="false" afterPath="$PROJECT_DIR$/Challenge6App-Picbel/Picbel/Picbel.xcodeproj/project.xcworkspace/xcuserdata/kavrin.xcuserdatad/UserInterfaceState.xcuserstate" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Challenge6App-Picbel/Picbel/Picbel/ContentView.swift" beforeDir="false" afterPath="$PROJECT_DIR$/Challenge6App-Picbel/Picbel/Picbel/ContentView.swift" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Challenge6App-Picbel/Picbel/Picbel/PicbelDataModel.xcdatamodeld/PicbelDataModel.xcdatamodel/contents" beforeDir="false" afterPath="$PROJECT_DIR$/Challenge6App-Picbel/Picbel/Picbel/PicbelDataModel.xcdatamodeld/PicbelDataModel.xcdatamodel/contents" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project12-CoreDataProject/CoreDataProject/CoreDataProject.xcodeproj/project.xcworkspace/xcuserdata/kavrin.xcuserdatad/UserInterfaceState.xcuserstate" beforeDir="false" afterPath="$PROJECT_DIR$/Project12-CoreDataProject/CoreDataProject/CoreDataProject.xcodeproj/project.xcworkspace/xcuserdata/kavrin.xcuserdatad/UserInterfaceState.xcuserstate" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

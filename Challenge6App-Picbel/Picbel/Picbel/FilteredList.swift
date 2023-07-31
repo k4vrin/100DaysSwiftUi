@@ -11,10 +11,10 @@ import CoreData
 struct FilteredList<T: NSManagedObject, Content: View>: View {
     @Environment(\.managedObjectContext) var moc
     @FetchRequest var fetchRequest: FetchedResults<T>
-    @ViewBuilder let content: (T) -> Content
+    @ViewBuilder let content: (T, NSManagedObjectContext) -> Content
     
     
-    init(sortDesc: [NSSortDescriptor] , content: @escaping (T) -> Content) {
+    init(sortDesc: [NSSortDescriptor] , content: @escaping (T, NSManagedObjectContext) -> Content) {
 //        _fetchRequest = FetchRequest<T>(sortDescriptors: sortDesc, predicate: NSPredicate(format: "%K \(predicate.description) %@", filterKey, filterValue))
         _fetchRequest = FetchRequest<T>(sortDescriptors: sortDesc)
         self.content = content
@@ -24,7 +24,7 @@ struct FilteredList<T: NSManagedObject, Content: View>: View {
     var body: some View {
         List {
             ForEach(fetchRequest, id: \.self) { item in
-                self.content(item)
+                self.content(item, moc)
             }
             .onDelete(perform: deleteBooks)
         }

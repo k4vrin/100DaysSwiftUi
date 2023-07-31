@@ -12,10 +12,15 @@
 		4C302F4D2A6FD42000D2B1C2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4C302F4C2A6FD42000D2B1C2 /* Assets.xcassets */; };
 		4C302F512A6FD42000D2B1C2 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4C302F502A6FD42000D2B1C2 /* Preview Assets.xcassets */; };
 		4C302F592A6FD5C900D2B1C2 /* PicbelDataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4C302F572A6FD5C900D2B1C2 /* PicbelDataModel.xcdatamodeld */; };
-		4C302F5C2A6FD67300D2B1C2 /* PicbelEntity+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C302F5A2A6FD67300D2B1C2 /* PicbelEntity+CoreDataClass.swift */; };
-		4C302F5D2A6FD67300D2B1C2 /* PicbelEntity+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C302F5B2A6FD67300D2B1C2 /* PicbelEntity+CoreDataProperties.swift */; };
 		4C302F5F2A6FD9F500D2B1C2 /* AddNewPictureView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C302F5E2A6FD9F500D2B1C2 /* AddNewPictureView.swift */; };
 		4C302F612A6FDE6000D2B1C2 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C302F602A6FDE6000D2B1C2 /* ImagePicker.swift */; };
+		4CA3E9532A77BFA300B62A0A /* DetailScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CA3E9522A77BFA300B62A0A /* DetailScreen.swift */; };
+		4CA3E9592A77D93A00B62A0A /* LocationDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CA3E9582A77D93A00B62A0A /* LocationDelegate.swift */; };
+		4CA3E95F2A77ED7300B62A0A /* AddLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CA3E95E2A77ED7300B62A0A /* AddLocation.swift */; };
+		4CA3E9722A77F56000B62A0A /* PicLocation+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CA3E96E2A77F56000B62A0A /* PicLocation+CoreDataClass.swift */; };
+		4CA3E9732A77F56000B62A0A /* PicLocation+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CA3E96F2A77F56000B62A0A /* PicLocation+CoreDataProperties.swift */; };
+		4CA3E9742A77F56000B62A0A /* PicbelEntity+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CA3E9702A77F56000B62A0A /* PicbelEntity+CoreDataClass.swift */; };
+		4CA3E9752A77F56000B62A0A /* PicbelEntity+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CA3E9712A77F56000B62A0A /* PicbelEntity+CoreDataProperties.swift */; };
 		4CB395632A766A6300D277E1 /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CB395622A766A6300D277E1 /* DataController.swift */; };
 		4CB395652A766C5F00D277E1 /* FilteredList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CB395642A766C5F00D277E1 /* FilteredList.swift */; };
 		4CB6F3562A75935100F1D165 /* FileManage-DocumentsDirectory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CB6F3552A75935100F1D165 /* FileManage-DocumentsDirectory.swift */; };
@@ -29,10 +34,15 @@
 		4C302F4E2A6FD42000D2B1C2 /* Picbel.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Picbel.entitlements; sourceTree = "<group>"; };
 		4C302F502A6FD42000D2B1C2 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		4C302F582A6FD5C900D2B1C2 /* PicbelDataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = PicbelDataModel.xcdatamodel; sourceTree = "<group>"; };
-		4C302F5A2A6FD67300D2B1C2 /* PicbelEntity+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PicbelEntity+CoreDataClass.swift"; sourceTree = SOURCE_ROOT; };
-		4C302F5B2A6FD67300D2B1C2 /* PicbelEntity+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PicbelEntity+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
 		4C302F5E2A6FD9F500D2B1C2 /* AddNewPictureView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewPictureView.swift; sourceTree = "<group>"; };
 		4C302F602A6FDE6000D2B1C2 /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
+		4CA3E9522A77BFA300B62A0A /* DetailScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailScreen.swift; sourceTree = "<group>"; };
+		4CA3E9582A77D93A00B62A0A /* LocationDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationDelegate.swift; sourceTree = "<group>"; };
+		4CA3E95E2A77ED7300B62A0A /* AddLocation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddLocation.swift; sourceTree = "<group>"; };
+		4CA3E96E2A77F56000B62A0A /* PicLocation+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PicLocation+CoreDataClass.swift"; sourceTree = SOURCE_ROOT; };
+		4CA3E96F2A77F56000B62A0A /* PicLocation+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PicLocation+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
+		4CA3E9702A77F56000B62A0A /* PicbelEntity+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PicbelEntity+CoreDataClass.swift"; sourceTree = SOURCE_ROOT; };
+		4CA3E9712A77F56000B62A0A /* PicbelEntity+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PicbelEntity+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
 		4CB395622A766A6300D277E1 /* DataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataController.swift; sourceTree = "<group>"; };
 		4CB395642A766C5F00D277E1 /* FilteredList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilteredList.swift; sourceTree = "<group>"; };
 		4CB6F3552A75935100F1D165 /* FileManage-DocumentsDirectory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FileManage-DocumentsDirectory.swift"; sourceTree = "<group>"; };
@@ -68,14 +78,19 @@
 		4C302F472A6FD41F00D2B1C2 /* Picbel */ = {
 			isa = PBXGroup;
 			children = (
-				4C302F5A2A6FD67300D2B1C2 /* PicbelEntity+CoreDataClass.swift */,
-				4C302F5B2A6FD67300D2B1C2 /* PicbelEntity+CoreDataProperties.swift */,
+				4CA3E96E2A77F56000B62A0A /* PicLocation+CoreDataClass.swift */,
+				4CA3E96F2A77F56000B62A0A /* PicLocation+CoreDataProperties.swift */,
+				4CA3E9702A77F56000B62A0A /* PicbelEntity+CoreDataClass.swift */,
+				4CA3E9712A77F56000B62A0A /* PicbelEntity+CoreDataProperties.swift */,
+				4CA3E9582A77D93A00B62A0A /* LocationDelegate.swift */,
 				4C302F482A6FD41F00D2B1C2 /* PicbelApp.swift */,
 				4CB395622A766A6300D277E1 /* DataController.swift */,
 				4C302F4A2A6FD41F00D2B1C2 /* ContentView.swift */,
 				4CB395642A766C5F00D277E1 /* FilteredList.swift */,
 				4C302F5E2A6FD9F500D2B1C2 /* AddNewPictureView.swift */,
 				4C302F602A6FDE6000D2B1C2 /* ImagePicker.swift */,
+				4CA3E9522A77BFA300B62A0A /* DetailScreen.swift */,
+				4CA3E95E2A77ED7300B62A0A /* AddLocation.swift */,
 				4C302F572A6FD5C900D2B1C2 /* PicbelDataModel.xcdatamodeld */,
 				4C302F4C2A6FD42000D2B1C2 /* Assets.xcassets */,
 				4C302F4E2A6FD42000D2B1C2 /* Picbel.entitlements */,
@@ -163,15 +178,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4CA3E9592A77D93A00B62A0A /* LocationDelegate.swift in Sources */,
 				4C302F592A6FD5C900D2B1C2 /* PicbelDataModel.xcdatamodeld in Sources */,
+				4CA3E9752A77F56000B62A0A /* PicbelEntity+CoreDataProperties.swift in Sources */,
 				4C302F4B2A6FD41F00D2B1C2 /* ContentView.swift in Sources */,
+				4CA3E9732A77F56000B62A0A /* PicLocation+CoreDataProperties.swift in Sources */,
 				4CB395652A766C5F00D277E1 /* FilteredList.swift in Sources */,
 				4C302F5F2A6FD9F500D2B1C2 /* AddNewPictureView.swift in Sources */,
+				4CA3E9742A77F56000B62A0A /* PicbelEntity+CoreDataClass.swift in Sources */,
 				4CB6F3562A75935100F1D165 /* FileManage-DocumentsDirectory.swift in Sources */,
+				4CA3E95F2A77ED7300B62A0A /* AddLocation.swift in Sources */,
+				4CA3E9722A77F56000B62A0A /* PicLocation+CoreDataClass.swift in Sources */,
 				4CB395632A766A6300D277E1 /* DataController.swift in Sources */,
 				4C302F612A6FDE6000D2B1C2 /* ImagePicker.swift in Sources */,
-				4C302F5D2A6FD67300D2B1C2 /* PicbelEntity+CoreDataProperties.swift in Sources */,
-				4C302F5C2A6FD67300D2B1C2 /* PicbelEntity+CoreDataClass.swift in Sources */,
+				4CA3E9532A77BFA300B62A0A /* DetailScreen.swift in Sources */,
 				4C302F492A6FD41F00D2B1C2 /* PicbelApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -301,6 +321,7 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
@@ -339,6 +360,7 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
