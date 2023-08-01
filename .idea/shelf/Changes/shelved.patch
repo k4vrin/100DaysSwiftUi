@@ -1,0 +1,312 @@
+Index: Challenge6App-Picbel/Picbel/Picbel/LocationDelegate.swift
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/Challenge6App-Picbel/Picbel/Picbel/LocationDelegate.swift b/Challenge6App-Picbel/Picbel/Picbel/LocationDelegate.swift
+new file mode 100644
+--- /dev/null	(date 1690805222877)
++++ b/Challenge6App-Picbel/Picbel/Picbel/LocationDelegate.swift	(date 1690805222877)
+@@ -0,0 +1,52 @@
++//
++//  LocationDelegate.swift
++//  Picbel
++//
++//  Created by Mostafa Hosseini on 7/31/23.
++//
++
++import Foundation
++import MapKit
++
++class locationDelegate: NSObject,ObservableObject,CLLocationManagerDelegate{
++    
++    let manager = CLLocationManager()
++    var hasSetRegion = false
++    
++    @Published var location: CLLocation?
++    @Published var region = MKCoordinateRegion(
++        center: CLLocationCoordinate2D(latitude: 38.898150, longitude: -77.034340),
++        span: MKCoordinateSpan(latitudeDelta: 1, longitudeDelta: 1)
++    )
++    
++    override init() {
++        super.init()
++        manager.delegate = self
++    }
++
++    // Checking authorization status...
++
++    func locationManagerDidChangeAuthorization() {
++
++        if manager.authorizationStatus == .authorizedWhenInUse{
++            print("Authorized")
++            manager.startUpdatingLocation()
++        } else {
++            print("not authorized")
++            manager.requestWhenInUseAuthorization()
++        }
++    }
++
++    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
++
++        if let location = locations.last {
++
++            self.location = location
++
++            if hasSetRegion == false{
++                region = MKCoordinateRegion(center: location.coordinate, span: MKCoordinateSpan(latitudeDelta: 0.001, longitudeDelta: 0.001))
++                hasSetRegion = true
++            }
++        }
++    }
++}
+Index: Challenge6App-Picbel/Picbel/Picbel.xcodeproj/project.pbxproj
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>// !$*UTF8*$!\n{\n\tarchiveVersion = 1;\n\tclasses = {\n\t};\n\tobjectVersion = 56;\n\tobjects = {\n\n/* Begin PBXBuildFile section */\n\t\t4C302F492A6FD41F00D2B1C2 /* PicbelApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C302F482A6FD41F00D2B1C2 /* PicbelApp.swift */; };\n\t\t4C302F4B2A6FD41F00D2B1C2 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C302F4A2A6FD41F00D2B1C2 /* ContentView.swift */; };\n\t\t4C302F4D2A6FD42000D2B1C2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4C302F4C2A6FD42000D2B1C2 /* Assets.xcassets */; };\n\t\t4C302F512A6FD42000D2B1C2 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4C302F502A6FD42000D2B1C2 /* Preview Assets.xcassets */; };\n\t\t4C302F592A6FD5C900D2B1C2 /* PicbelDataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4C302F572A6FD5C900D2B1C2 /* PicbelDataModel.xcdatamodeld */; };\n\t\t4C302F5C2A6FD67300D2B1C2 /* PicbelEntity+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C302F5A2A6FD67300D2B1C2 /* PicbelEntity+CoreDataClass.swift */; };\n\t\t4C302F5D2A6FD67300D2B1C2 /* PicbelEntity+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C302F5B2A6FD67300D2B1C2 /* PicbelEntity+CoreDataProperties.swift */; };\n\t\t4C302F5F2A6FD9F500D2B1C2 /* AddNewPictureView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C302F5E2A6FD9F500D2B1C2 /* AddNewPictureView.swift */; };\n\t\t4C302F612A6FDE6000D2B1C2 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C302F602A6FDE6000D2B1C2 /* ImagePicker.swift */; };\n\t\t4CB395632A766A6300D277E1 /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CB395622A766A6300D277E1 /* DataController.swift */; };\n\t\t4CB395652A766C5F00D277E1 /* FilteredList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CB395642A766C5F00D277E1 /* FilteredList.swift */; };\n\t\t4CB6F3562A75935100F1D165 /* FileManage-DocumentsDirectory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CB6F3552A75935100F1D165 /* FileManage-DocumentsDirectory.swift */; };\n/* End PBXBuildFile section */\n\n/* Begin PBXFileReference section */\n\t\t4C302F452A6FD41F00D2B1C2 /* Picbel.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Picbel.app; sourceTree = BUILT_PRODUCTS_DIR; };\n\t\t4C302F482A6FD41F00D2B1C2 /* PicbelApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PicbelApp.swift; sourceTree = \"<group>\"; };\n\t\t4C302F4A2A6FD41F00D2B1C2 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = \"<group>\"; };\n\t\t4C302F4C2A6FD42000D2B1C2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = \"<group>\"; };\n\t\t4C302F4E2A6FD42000D2B1C2 /* Picbel.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Picbel.entitlements; sourceTree = \"<group>\"; };\n\t\t4C302F502A6FD42000D2B1C2 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = \"Preview Assets.xcassets\"; sourceTree = \"<group>\"; };\n\t\t4C302F582A6FD5C900D2B1C2 /* PicbelDataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = PicbelDataModel.xcdatamodel; sourceTree = \"<group>\"; };\n\t\t4C302F5A2A6FD67300D2B1C2 /* PicbelEntity+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = \"PicbelEntity+CoreDataClass.swift\"; sourceTree = SOURCE_ROOT; };\n\t\t4C302F5B2A6FD67300D2B1C2 /* PicbelEntity+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = \"PicbelEntity+CoreDataProperties.swift\"; sourceTree = SOURCE_ROOT; };\n\t\t4C302F5E2A6FD9F500D2B1C2 /* AddNewPictureView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewPictureView.swift; sourceTree = \"<group>\"; };\n\t\t4C302F602A6FDE6000D2B1C2 /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = \"<group>\"; };\n\t\t4CB395622A766A6300D277E1 /* DataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataController.swift; sourceTree = \"<group>\"; };\n\t\t4CB395642A766C5F00D277E1 /* FilteredList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilteredList.swift; sourceTree = \"<group>\"; };\n\t\t4CB6F3552A75935100F1D165 /* FileManage-DocumentsDirectory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = \"FileManage-DocumentsDirectory.swift\"; sourceTree = \"<group>\"; };\n/* End PBXFileReference section */\n\n/* Begin PBXFrameworksBuildPhase section */\n\t\t4C302F422A6FD41F00D2B1C2 /* Frameworks */ = {\n\t\t\tisa = PBXFrameworksBuildPhase;\n\t\t\tbuildActionMask = 2147483647;\n\t\t\tfiles = (\n\t\t\t);\n\t\t\trunOnlyForDeploymentPostprocessing = 0;\n\t\t};\n/* End PBXFrameworksBuildPhase section */\n\n/* Begin PBXGroup section */\n\t\t4C302F3C2A6FD41F00D2B1C2 = {\n\t\t\tisa = PBXGroup;\n\t\t\tchildren = (\n\t\t\t\t4C302F472A6FD41F00D2B1C2 /* Picbel */,\n\t\t\t\t4C302F462A6FD41F00D2B1C2 /* Products */,\n\t\t\t);\n\t\t\tsourceTree = \"<group>\";\n\t\t};\n\t\t4C302F462A6FD41F00D2B1C2 /* Products */ = {\n\t\t\tisa = PBXGroup;\n\t\t\tchildren = (\n\t\t\t\t4C302F452A6FD41F00D2B1C2 /* Picbel.app */,\n\t\t\t);\n\t\t\tname = Products;\n\t\t\tsourceTree = \"<group>\";\n\t\t};\n\t\t4C302F472A6FD41F00D2B1C2 /* Picbel */ = {\n\t\t\tisa = PBXGroup;\n\t\t\tchildren = (\n\t\t\t\t4C302F5A2A6FD67300D2B1C2 /* PicbelEntity+CoreDataClass.swift */,\n\t\t\t\t4C302F5B2A6FD67300D2B1C2 /* PicbelEntity+CoreDataProperties.swift */,\n\t\t\t\t4C302F482A6FD41F00D2B1C2 /* PicbelApp.swift */,\n\t\t\t\t4CB395622A766A6300D277E1 /* DataController.swift */,\n\t\t\t\t4C302F4A2A6FD41F00D2B1C2 /* ContentView.swift */,\n\t\t\t\t4CB395642A766C5F00D277E1 /* FilteredList.swift */,\n\t\t\t\t4C302F5E2A6FD9F500D2B1C2 /* AddNewPictureView.swift */,\n\t\t\t\t4C302F602A6FDE6000D2B1C2 /* ImagePicker.swift */,\n\t\t\t\t4C302F572A6FD5C900D2B1C2 /* PicbelDataModel.xcdatamodeld */,\n\t\t\t\t4C302F4C2A6FD42000D2B1C2 /* Assets.xcassets */,\n\t\t\t\t4C302F4E2A6FD42000D2B1C2 /* Picbel.entitlements */,\n\t\t\t\t4C302F4F2A6FD42000D2B1C2 /* Preview Content */,\n\t\t\t\t4CB6F3552A75935100F1D165 /* FileManage-DocumentsDirectory.swift */,\n\t\t\t);\n\t\t\tpath = Picbel;\n\t\t\tsourceTree = \"<group>\";\n\t\t};\n\t\t4C302F4F2A6FD42000D2B1C2 /* Preview Content */ = {\n\t\t\tisa = PBXGroup;\n\t\t\tchildren = (\n\t\t\t\t4C302F502A6FD42000D2B1C2 /* Preview Assets.xcassets */,\n\t\t\t);\n\t\t\tpath = \"Preview Content\";\n\t\t\tsourceTree = \"<group>\";\n\t\t};\n/* End PBXGroup section */\n\n/* Begin PBXNativeTarget section */\n\t\t4C302F442A6FD41F00D2B1C2 /* Picbel */ = {\n\t\t\tisa = PBXNativeTarget;\n\t\t\tbuildConfigurationList = 4C302F542A6FD42000D2B1C2 /* Build configuration list for PBXNativeTarget \"Picbel\" */;\n\t\t\tbuildPhases = (\n\t\t\t\t4C302F412A6FD41F00D2B1C2 /* Sources */,\n\t\t\t\t4C302F422A6FD41F00D2B1C2 /* Frameworks */,\n\t\t\t\t4C302F432A6FD41F00D2B1C2 /* Resources */,\n\t\t\t);\n\t\t\tbuildRules = (\n\t\t\t);\n\t\t\tdependencies = (\n\t\t\t);\n\t\t\tname = Picbel;\n\t\t\tproductName = Picbel;\n\t\t\tproductReference = 4C302F452A6FD41F00D2B1C2 /* Picbel.app */;\n\t\t\tproductType = \"com.apple.product-type.application\";\n\t\t};\n/* End PBXNativeTarget section */\n\n/* Begin PBXProject section */\n\t\t4C302F3D2A6FD41F00D2B1C2 /* Project object */ = {\n\t\t\tisa = PBXProject;\n\t\t\tattributes = {\n\t\t\t\tBuildIndependentTargetsInParallel = 1;\n\t\t\t\tLastSwiftUpdateCheck = 1430;\n\t\t\t\tLastUpgradeCheck = 1430;\n\t\t\t\tTargetAttributes = {\n\t\t\t\t\t4C302F442A6FD41F00D2B1C2 = {\n\t\t\t\t\t\tCreatedOnToolsVersion = 14.3.1;\n\t\t\t\t\t};\n\t\t\t\t};\n\t\t\t};\n\t\t\tbuildConfigurationList = 4C302F402A6FD41F00D2B1C2 /* Build configuration list for PBXProject \"Picbel\" */;\n\t\t\tcompatibilityVersion = \"Xcode 14.0\";\n\t\t\tdevelopmentRegion = en;\n\t\t\thasScannedForEncodings = 0;\n\t\t\tknownRegions = (\n\t\t\t\ten,\n\t\t\t\tBase,\n\t\t\t);\n\t\t\tmainGroup = 4C302F3C2A6FD41F00D2B1C2;\n\t\t\tproductRefGroup = 4C302F462A6FD41F00D2B1C2 /* Products */;\n\t\t\tprojectDirPath = \"\";\n\t\t\tprojectRoot = \"\";\n\t\t\ttargets = (\n\t\t\t\t4C302F442A6FD41F00D2B1C2 /* Picbel */,\n\t\t\t);\n\t\t};\n/* End PBXProject section */\n\n/* Begin PBXResourcesBuildPhase section */\n\t\t4C302F432A6FD41F00D2B1C2 /* Resources */ = {\n\t\t\tisa = PBXResourcesBuildPhase;\n\t\t\tbuildActionMask = 2147483647;\n\t\t\tfiles = (\n\t\t\t\t4C302F512A6FD42000D2B1C2 /* Preview Assets.xcassets in Resources */,\n\t\t\t\t4C302F4D2A6FD42000D2B1C2 /* Assets.xcassets in Resources */,\n\t\t\t);\n\t\t\trunOnlyForDeploymentPostprocessing = 0;\n\t\t};\n/* End PBXResourcesBuildPhase section */\n\n/* Begin PBXSourcesBuildPhase section */\n\t\t4C302F412A6FD41F00D2B1C2 /* Sources */ = {\n\t\t\tisa = PBXSourcesBuildPhase;\n\t\t\tbuildActionMask = 2147483647;\n\t\t\tfiles = (\n\t\t\t\t4C302F592A6FD5C900D2B1C2 /* PicbelDataModel.xcdatamodeld in Sources */,\n\t\t\t\t4C302F4B2A6FD41F00D2B1C2 /* ContentView.swift in Sources */,\n\t\t\t\t4CB395652A766C5F00D277E1 /* FilteredList.swift in Sources */,\n\t\t\t\t4C302F5F2A6FD9F500D2B1C2 /* AddNewPictureView.swift in Sources */,\n\t\t\t\t4CB6F3562A75935100F1D165 /* FileManage-DocumentsDirectory.swift in Sources */,\n\t\t\t\t4CB395632A766A6300D277E1 /* DataController.swift in Sources */,\n\t\t\t\t4C302F612A6FDE6000D2B1C2 /* ImagePicker.swift in Sources */,\n\t\t\t\t4C302F5D2A6FD67300D2B1C2 /* PicbelEntity+CoreDataProperties.swift in Sources */,\n\t\t\t\t4C302F5C2A6FD67300D2B1C2 /* PicbelEntity+CoreDataClass.swift in Sources */,\n\t\t\t\t4C302F492A6FD41F00D2B1C2 /* PicbelApp.swift in Sources */,\n\t\t\t);\n\t\t\trunOnlyForDeploymentPostprocessing = 0;\n\t\t};\n/* End PBXSourcesBuildPhase section */\n\n/* Begin XCBuildConfiguration section */\n\t\t4C302F522A6FD42000D2B1C2 /* Debug */ = {\n\t\t\tisa = XCBuildConfiguration;\n\t\t\tbuildSettings = {\n\t\t\t\tALWAYS_SEARCH_USER_PATHS = NO;\n\t\t\t\tCLANG_ANALYZER_NONNULL = YES;\n\t\t\t\tCLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;\n\t\t\t\tCLANG_CXX_LANGUAGE_STANDARD = \"gnu++20\";\n\t\t\t\tCLANG_ENABLE_MODULES = YES;\n\t\t\t\tCLANG_ENABLE_OBJC_ARC = YES;\n\t\t\t\tCLANG_ENABLE_OBJC_WEAK = YES;\n\t\t\t\tCLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;\n\t\t\t\tCLANG_WARN_BOOL_CONVERSION = YES;\n\t\t\t\tCLANG_WARN_COMMA = YES;\n\t\t\t\tCLANG_WARN_CONSTANT_CONVERSION = YES;\n\t\t\t\tCLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;\n\t\t\t\tCLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;\n\t\t\t\tCLANG_WARN_DOCUMENTATION_COMMENTS = YES;\n\t\t\t\tCLANG_WARN_EMPTY_BODY = YES;\n\t\t\t\tCLANG_WARN_ENUM_CONVERSION = YES;\n\t\t\t\tCLANG_WARN_INFINITE_RECURSION = YES;\n\t\t\t\tCLANG_WARN_INT_CONVERSION = YES;\n\t\t\t\tCLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;\n\t\t\t\tCLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;\n\t\t\t\tCLANG_WARN_OBJC_LITERAL_CONVERSION = YES;\n\t\t\t\tCLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;\n\t\t\t\tCLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;\n\t\t\t\tCLANG_WARN_RANGE_LOOP_ANALYSIS = YES;\n\t\t\t\tCLANG_WARN_STRICT_PROTOTYPES = YES;\n\t\t\t\tCLANG_WARN_SUSPICIOUS_MOVE = YES;\n\t\t\t\tCLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;\n\t\t\t\tCLANG_WARN_UNREACHABLE_CODE = YES;\n\t\t\t\tCLANG_WARN__DUPLICATE_METHOD_MATCH = YES;\n\t\t\t\tCOPY_PHASE_STRIP = NO;\n\t\t\t\tDEBUG_INFORMATION_FORMAT = dwarf;\n\t\t\t\tENABLE_STRICT_OBJC_MSGSEND = YES;\n\t\t\t\tENABLE_TESTABILITY = YES;\n\t\t\t\tGCC_C_LANGUAGE_STANDARD = gnu11;\n\t\t\t\tGCC_DYNAMIC_NO_PIC = NO;\n\t\t\t\tGCC_NO_COMMON_BLOCKS = YES;\n\t\t\t\tGCC_OPTIMIZATION_LEVEL = 0;\n\t\t\t\tGCC_PREPROCESSOR_DEFINITIONS = (\n\t\t\t\t\t\"DEBUG=1\",\n\t\t\t\t\t\"$(inherited)\",\n\t\t\t\t);\n\t\t\t\tGCC_WARN_64_TO_32_BIT_CONVERSION = YES;\n\t\t\t\tGCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;\n\t\t\t\tGCC_WARN_UNDECLARED_SELECTOR = YES;\n\t\t\t\tGCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;\n\t\t\t\tGCC_WARN_UNUSED_FUNCTION = YES;\n\t\t\t\tGCC_WARN_UNUSED_VARIABLE = YES;\n\t\t\t\tMTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;\n\t\t\t\tMTL_FAST_MATH = YES;\n\t\t\t\tONLY_ACTIVE_ARCH = YES;\n\t\t\t\tSWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;\n\t\t\t\tSWIFT_OPTIMIZATION_LEVEL = \"-Onone\";\n\t\t\t};\n\t\t\tname = Debug;\n\t\t};\n\t\t4C302F532A6FD42000D2B1C2 /* Release */ = {\n\t\t\tisa = XCBuildConfiguration;\n\t\t\tbuildSettings = {\n\t\t\t\tALWAYS_SEARCH_USER_PATHS = NO;\n\t\t\t\tCLANG_ANALYZER_NONNULL = YES;\n\t\t\t\tCLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;\n\t\t\t\tCLANG_CXX_LANGUAGE_STANDARD = \"gnu++20\";\n\t\t\t\tCLANG_ENABLE_MODULES = YES;\n\t\t\t\tCLANG_ENABLE_OBJC_ARC = YES;\n\t\t\t\tCLANG_ENABLE_OBJC_WEAK = YES;\n\t\t\t\tCLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;\n\t\t\t\tCLANG_WARN_BOOL_CONVERSION = YES;\n\t\t\t\tCLANG_WARN_COMMA = YES;\n\t\t\t\tCLANG_WARN_CONSTANT_CONVERSION = YES;\n\t\t\t\tCLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;\n\t\t\t\tCLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;\n\t\t\t\tCLANG_WARN_DOCUMENTATION_COMMENTS = YES;\n\t\t\t\tCLANG_WARN_EMPTY_BODY = YES;\n\t\t\t\tCLANG_WARN_ENUM_CONVERSION = YES;\n\t\t\t\tCLANG_WARN_INFINITE_RECURSION = YES;\n\t\t\t\tCLANG_WARN_INT_CONVERSION = YES;\n\t\t\t\tCLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;\n\t\t\t\tCLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;\n\t\t\t\tCLANG_WARN_OBJC_LITERAL_CONVERSION = YES;\n\t\t\t\tCLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;\n\t\t\t\tCLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;\n\t\t\t\tCLANG_WARN_RANGE_LOOP_ANALYSIS = YES;\n\t\t\t\tCLANG_WARN_STRICT_PROTOTYPES = YES;\n\t\t\t\tCLANG_WARN_SUSPICIOUS_MOVE = YES;\n\t\t\t\tCLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;\n\t\t\t\tCLANG_WARN_UNREACHABLE_CODE = YES;\n\t\t\t\tCLANG_WARN__DUPLICATE_METHOD_MATCH = YES;\n\t\t\t\tCOPY_PHASE_STRIP = NO;\n\t\t\t\tDEBUG_INFORMATION_FORMAT = \"dwarf-with-dsym\";\n\t\t\t\tENABLE_NS_ASSERTIONS = NO;\n\t\t\t\tENABLE_STRICT_OBJC_MSGSEND = YES;\n\t\t\t\tGCC_C_LANGUAGE_STANDARD = gnu11;\n\t\t\t\tGCC_NO_COMMON_BLOCKS = YES;\n\t\t\t\tGCC_WARN_64_TO_32_BIT_CONVERSION = YES;\n\t\t\t\tGCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;\n\t\t\t\tGCC_WARN_UNDECLARED_SELECTOR = YES;\n\t\t\t\tGCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;\n\t\t\t\tGCC_WARN_UNUSED_FUNCTION = YES;\n\t\t\t\tGCC_WARN_UNUSED_VARIABLE = YES;\n\t\t\t\tMTL_ENABLE_DEBUG_INFO = NO;\n\t\t\t\tMTL_FAST_MATH = YES;\n\t\t\t\tSWIFT_COMPILATION_MODE = wholemodule;\n\t\t\t\tSWIFT_OPTIMIZATION_LEVEL = \"-O\";\n\t\t\t};\n\t\t\tname = Release;\n\t\t};\n\t\t4C302F552A6FD42000D2B1C2 /* Debug */ = {\n\t\t\tisa = XCBuildConfiguration;\n\t\t\tbuildSettings = {\n\t\t\t\tASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;\n\t\t\t\tASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;\n\t\t\t\tCODE_SIGN_ENTITLEMENTS = Picbel/Picbel.entitlements;\n\t\t\t\tCODE_SIGN_STYLE = Automatic;\n\t\t\t\tCURRENT_PROJECT_VERSION = 1;\n\t\t\t\tDEVELOPMENT_ASSET_PATHS = \"\\\"Picbel/Preview Content\\\"\";\n\t\t\t\tDEVELOPMENT_TEAM = P5KXU6U227;\n\t\t\t\tENABLE_HARDENED_RUNTIME = YES;\n\t\t\t\tENABLE_PREVIEWS = YES;\n\t\t\t\tGENERATE_INFOPLIST_FILE = YES;\n\t\t\t\t\"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]\" = YES;\n\t\t\t\t\"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]\" = YES;\n\t\t\t\t\"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]\" = YES;\n\t\t\t\t\"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphonesimulator*]\" = YES;\n\t\t\t\t\"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphoneos*]\" = YES;\n\t\t\t\t\"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]\" = YES;\n\t\t\t\t\"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]\" = UIStatusBarStyleDefault;\n\t\t\t\t\"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]\" = UIStatusBarStyleDefault;\n\t\t\t\tINFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = \"UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight\";\n\t\t\t\tINFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = \"UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight\";\n\t\t\t\tIPHONEOS_DEPLOYMENT_TARGET = 16.4;\n\t\t\t\tLD_RUNPATH_SEARCH_PATHS = \"@executable_path/Frameworks\";\n\t\t\t\t\"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]\" = \"@executable_path/../Frameworks\";\n\t\t\t\tMACOSX_DEPLOYMENT_TARGET = 13.3;\n\t\t\t\tMARKETING_VERSION = 1.0;\n\t\t\t\tPRODUCT_BUNDLE_IDENTIFIER = dev.kavrin.Picbel;\n\t\t\t\tPRODUCT_NAME = \"$(TARGET_NAME)\";\n\t\t\t\tSDKROOT = auto;\n\t\t\t\tSUPPORTED_PLATFORMS = \"iphoneos iphonesimulator macosx\";\n\t\t\t\tSWIFT_EMIT_LOC_STRINGS = YES;\n\t\t\t\tSWIFT_VERSION = 5.0;\n\t\t\t\tTARGETED_DEVICE_FAMILY = \"1,2\";\n\t\t\t};\n\t\t\tname = Debug;\n\t\t};\n\t\t4C302F562A6FD42000D2B1C2 /* Release */ = {\n\t\t\tisa = XCBuildConfiguration;\n\t\t\tbuildSettings = {\n\t\t\t\tASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;\n\t\t\t\tASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;\n\t\t\t\tCODE_SIGN_ENTITLEMENTS = Picbel/Picbel.entitlements;\n\t\t\t\tCODE_SIGN_STYLE = Automatic;\n\t\t\t\tCURRENT_PROJECT_VERSION = 1;\n\t\t\t\tDEVELOPMENT_ASSET_PATHS = \"\\\"Picbel/Preview Content\\\"\";\n\t\t\t\tDEVELOPMENT_TEAM = P5KXU6U227;\n\t\t\t\tENABLE_HARDENED_RUNTIME = YES;\n\t\t\t\tENABLE_PREVIEWS = YES;\n\t\t\t\tGENERATE_INFOPLIST_FILE = YES;\n\t\t\t\t\"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]\" = YES;\n\t\t\t\t\"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]\" = YES;\n\t\t\t\t\"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]\" = YES;\n\t\t\t\t\"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphonesimulator*]\" = YES;\n\t\t\t\t\"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphoneos*]\" = YES;\n\t\t\t\t\"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]\" = YES;\n\t\t\t\t\"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]\" = UIStatusBarStyleDefault;\n\t\t\t\t\"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]\" = UIStatusBarStyleDefault;\n\t\t\t\tINFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = \"UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight\";\n\t\t\t\tINFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = \"UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight\";\n\t\t\t\tIPHONEOS_DEPLOYMENT_TARGET = 16.4;\n\t\t\t\tLD_RUNPATH_SEARCH_PATHS = \"@executable_path/Frameworks\";\n\t\t\t\t\"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]\" = \"@executable_path/../Frameworks\";\n\t\t\t\tMACOSX_DEPLOYMENT_TARGET = 13.3;\n\t\t\t\tMARKETING_VERSION = 1.0;\n\t\t\t\tPRODUCT_BUNDLE_IDENTIFIER = dev.kavrin.Picbel;\n\t\t\t\tPRODUCT_NAME = \"$(TARGET_NAME)\";\n\t\t\t\tSDKROOT = auto;\n\t\t\t\tSUPPORTED_PLATFORMS = \"iphoneos iphonesimulator macosx\";\n\t\t\t\tSWIFT_EMIT_LOC_STRINGS = YES;\n\t\t\t\tSWIFT_VERSION = 5.0;\n\t\t\t\tTARGETED_DEVICE_FAMILY = \"1,2\";\n\t\t\t};\n\t\t\tname = Release;\n\t\t};\n/* End XCBuildConfiguration section */\n\n/* Begin XCConfigurationList section */\n\t\t4C302F402A6FD41F00D2B1C2 /* Build configuration list for PBXProject \"Picbel\" */ = {\n\t\t\tisa = XCConfigurationList;\n\t\t\tbuildConfigurations = (\n\t\t\t\t4C302F522A6FD42000D2B1C2 /* Debug */,\n\t\t\t\t4C302F532A6FD42000D2B1C2 /* Release */,\n\t\t\t);\n\t\t\tdefaultConfigurationIsVisible = 0;\n\t\t\tdefaultConfigurationName = Release;\n\t\t};\n\t\t4C302F542A6FD42000D2B1C2 /* Build configuration list for PBXNativeTarget \"Picbel\" */ = {\n\t\t\tisa = XCConfigurationList;\n\t\t\tbuildConfigurations = (\n\t\t\t\t4C302F552A6FD42000D2B1C2 /* Debug */,\n\t\t\t\t4C302F562A6FD42000D2B1C2 /* Release */,\n\t\t\t);\n\t\t\tdefaultConfigurationIsVisible = 0;\n\t\t\tdefaultConfigurationName = Release;\n\t\t};\n/* End XCConfigurationList section */\n\n/* Begin XCVersionGroup section */\n\t\t4C302F572A6FD5C900D2B1C2 /* PicbelDataModel.xcdatamodeld */ = {\n\t\t\tisa = XCVersionGroup;\n\t\t\tchildren = (\n\t\t\t\t4C302F582A6FD5C900D2B1C2 /* PicbelDataModel.xcdatamodel */,\n\t\t\t);\n\t\t\tcurrentVersion = 4C302F582A6FD5C900D2B1C2 /* PicbelDataModel.xcdatamodel */;\n\t\t\tpath = PicbelDataModel.xcdatamodeld;\n\t\t\tsourceTree = \"<group>\";\n\t\t\tversionGroupType = wrapper.xcdatamodel;\n\t\t};\n/* End XCVersionGroup section */\n\t};\n\trootObject = 4C302F3D2A6FD41F00D2B1C2 /* Project object */;\n}\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/Challenge6App-Picbel/Picbel/Picbel.xcodeproj/project.pbxproj b/Challenge6App-Picbel/Picbel/Picbel.xcodeproj/project.pbxproj
+--- a/Challenge6App-Picbel/Picbel/Picbel.xcodeproj/project.pbxproj	(revision b797e60b10b581e4df48f12aecb18d736a9073f8)
++++ b/Challenge6App-Picbel/Picbel/Picbel.xcodeproj/project.pbxproj	(date 1690805536932)
+@@ -16,6 +16,9 @@
+ 		4C302F5D2A6FD67300D2B1C2 /* PicbelEntity+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C302F5B2A6FD67300D2B1C2 /* PicbelEntity+CoreDataProperties.swift */; };
+ 		4C302F5F2A6FD9F500D2B1C2 /* AddNewPictureView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C302F5E2A6FD9F500D2B1C2 /* AddNewPictureView.swift */; };
+ 		4C302F612A6FDE6000D2B1C2 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C302F602A6FDE6000D2B1C2 /* ImagePicker.swift */; };
++		4CA3E9532A77BFA300B62A0A /* DetailScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CA3E9522A77BFA300B62A0A /* DetailScreen.swift */; };
++		4CA3E9592A77D93A00B62A0A /* LocationDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CA3E9582A77D93A00B62A0A /* LocationDelegate.swift */; };
++		4CA3E95B2A77DCA000B62A0A /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CA3E95A2A77DCA000B62A0A /* Location.swift */; };
+ 		4CB395632A766A6300D277E1 /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CB395622A766A6300D277E1 /* DataController.swift */; };
+ 		4CB395652A766C5F00D277E1 /* FilteredList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CB395642A766C5F00D277E1 /* FilteredList.swift */; };
+ 		4CB6F3562A75935100F1D165 /* FileManage-DocumentsDirectory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CB6F3552A75935100F1D165 /* FileManage-DocumentsDirectory.swift */; };
+@@ -33,6 +36,9 @@
+ 		4C302F5B2A6FD67300D2B1C2 /* PicbelEntity+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PicbelEntity+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
+ 		4C302F5E2A6FD9F500D2B1C2 /* AddNewPictureView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewPictureView.swift; sourceTree = "<group>"; };
+ 		4C302F602A6FDE6000D2B1C2 /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
++		4CA3E9522A77BFA300B62A0A /* DetailScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailScreen.swift; sourceTree = "<group>"; };
++		4CA3E9582A77D93A00B62A0A /* LocationDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationDelegate.swift; sourceTree = "<group>"; };
++		4CA3E95A2A77DCA000B62A0A /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
+ 		4CB395622A766A6300D277E1 /* DataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataController.swift; sourceTree = "<group>"; };
+ 		4CB395642A766C5F00D277E1 /* FilteredList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilteredList.swift; sourceTree = "<group>"; };
+ 		4CB6F3552A75935100F1D165 /* FileManage-DocumentsDirectory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FileManage-DocumentsDirectory.swift"; sourceTree = "<group>"; };
+@@ -68,6 +74,7 @@
+ 		4C302F472A6FD41F00D2B1C2 /* Picbel */ = {
+ 			isa = PBXGroup;
+ 			children = (
++				4CA3E9582A77D93A00B62A0A /* LocationDelegate.swift */,
+ 				4C302F5A2A6FD67300D2B1C2 /* PicbelEntity+CoreDataClass.swift */,
+ 				4C302F5B2A6FD67300D2B1C2 /* PicbelEntity+CoreDataProperties.swift */,
+ 				4C302F482A6FD41F00D2B1C2 /* PicbelApp.swift */,
+@@ -76,11 +83,13 @@
+ 				4CB395642A766C5F00D277E1 /* FilteredList.swift */,
+ 				4C302F5E2A6FD9F500D2B1C2 /* AddNewPictureView.swift */,
+ 				4C302F602A6FDE6000D2B1C2 /* ImagePicker.swift */,
++				4CA3E9522A77BFA300B62A0A /* DetailScreen.swift */,
+ 				4C302F572A6FD5C900D2B1C2 /* PicbelDataModel.xcdatamodeld */,
+ 				4C302F4C2A6FD42000D2B1C2 /* Assets.xcassets */,
+ 				4C302F4E2A6FD42000D2B1C2 /* Picbel.entitlements */,
+ 				4C302F4F2A6FD42000D2B1C2 /* Preview Content */,
+ 				4CB6F3552A75935100F1D165 /* FileManage-DocumentsDirectory.swift */,
++				4CA3E95A2A77DCA000B62A0A /* Location.swift */,
+ 			);
+ 			path = Picbel;
+ 			sourceTree = "<group>";
+@@ -163,15 +172,18 @@
+ 			isa = PBXSourcesBuildPhase;
+ 			buildActionMask = 2147483647;
+ 			files = (
++				4CA3E9592A77D93A00B62A0A /* LocationDelegate.swift in Sources */,
+ 				4C302F592A6FD5C900D2B1C2 /* PicbelDataModel.xcdatamodeld in Sources */,
+ 				4C302F4B2A6FD41F00D2B1C2 /* ContentView.swift in Sources */,
+ 				4CB395652A766C5F00D277E1 /* FilteredList.swift in Sources */,
+ 				4C302F5F2A6FD9F500D2B1C2 /* AddNewPictureView.swift in Sources */,
+ 				4CB6F3562A75935100F1D165 /* FileManage-DocumentsDirectory.swift in Sources */,
++				4CA3E95B2A77DCA000B62A0A /* Location.swift in Sources */,
+ 				4CB395632A766A6300D277E1 /* DataController.swift in Sources */,
+ 				4C302F612A6FDE6000D2B1C2 /* ImagePicker.swift in Sources */,
+ 				4C302F5D2A6FD67300D2B1C2 /* PicbelEntity+CoreDataProperties.swift in Sources */,
+ 				4C302F5C2A6FD67300D2B1C2 /* PicbelEntity+CoreDataClass.swift in Sources */,
++				4CA3E9532A77BFA300B62A0A /* DetailScreen.swift in Sources */,
+ 				4C302F492A6FD41F00D2B1C2 /* PicbelApp.swift in Sources */,
+ 			);
+ 			runOnlyForDeploymentPostprocessing = 0;
+@@ -301,6 +313,7 @@
+ 				ENABLE_HARDENED_RUNTIME = YES;
+ 				ENABLE_PREVIEWS = YES;
+ 				GENERATE_INFOPLIST_FILE = YES;
++				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "";
+ 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
+ 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
+ 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
+@@ -339,6 +352,7 @@
+ 				ENABLE_HARDENED_RUNTIME = YES;
+ 				ENABLE_PREVIEWS = YES;
+ 				GENERATE_INFOPLIST_FILE = YES;
++				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "";
+ 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
+ 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
+ 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
+Index: Challenge6App-Picbel/Picbel/Picbel/Location.swift
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/Challenge6App-Picbel/Picbel/Picbel/Location.swift b/Challenge6App-Picbel/Picbel/Picbel/Location.swift
+new file mode 100644
+--- /dev/null	(date 1690805555089)
++++ b/Challenge6App-Picbel/Picbel/Picbel/Location.swift	(date 1690805555089)
+@@ -0,0 +1,28 @@
++//
++//  Location.swift
++//  Picbel
++//
++//  Created by Mostafa Hosseini on 7/31/23.
++//
++
++import Foundation
++import CoreLocation
++
++struct Location: Identifiable, Codable, Equatable {
++    var id: UUID
++    var name: String
++    var description: String
++    let latitude: Double
++    let longitude: Double
++    
++    var coordinate: CLLocationCoordinate2D {
++        CLLocationCoordinate2D(latitude: latitude, longitude: longitude)
++    }
++    
++    static let example = Location(id: UUID(), name: "Buckingham Palace", description: "Where queen Elizabeth lives with her dorgis", latitude: 51.501, longitude: -0.141)
++    
++    
++    static func ==(lhs: Location, rhs: Location) -> Bool {
++        lhs.id == rhs.id
++    }
++}
+Index: Challenge6App-Picbel/Picbel/Picbel/ContentView.swift
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>//\n//  ContentView.swift\n//  Picbel\n//\n//  Created by Mostafa Hosseini on 7/25/23.\n//\n\nimport CoreData\nimport SwiftUI\n\nstruct ContentView: View {\n    @State private var showSheet = false\n\n    var body: some View {\n        VStack {\n            FilteredList(\n                sortDesc: [NSSortDescriptor(key: \"created_at\", ascending: true)]\n            ) { (picbel: PicbelEntity) in\n                HStack {\n                    if let img = loadImg(picbel.img_id ?? \"\") {\n                        Image(uiImage: img)\n                            .resizable()\n                            .scaledToFit()\n                    }\n                    Text(picbel.name ?? \"err\")\n                        .foregroundColor(Color.black)\n                }\n                .frame(height: 56)\n            }\n        }\n        .sheet(isPresented: $showSheet) {\n            AddNewPictureView()\n        }\n        .toolbar {\n            ToolbarItem {\n                Button {\n                    showSheet = true\n                } label: {\n                    Image(systemName: \"plus.app\")\n                }\n            }\n\n            ToolbarItem(placement: .navigationBarLeading) {\n                EditButton()\n            }\n        }\n        .navigationTitle(\"Picbel\")\n    }\n\n    func loadImg(_ imgId: String) -> UIImage? {\n        do {\n            let data = try Data(contentsOf: FileManager.documentsDirectory.appendingPathComponent(imgId))\n            return UIImage(data: data)\n        } catch {\n            print(\"Error loading img\")\n            return nil\n        }\n    }\n}\n\nstruct ContentView_Previews: PreviewProvider {\n    static var previews: some View {\n        ContentView()\n    }\n}\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/Challenge6App-Picbel/Picbel/Picbel/ContentView.swift b/Challenge6App-Picbel/Picbel/Picbel/ContentView.swift
+--- a/Challenge6App-Picbel/Picbel/Picbel/ContentView.swift	(revision b797e60b10b581e4df48f12aecb18d736a9073f8)
++++ b/Challenge6App-Picbel/Picbel/Picbel/ContentView.swift	(date 1690798802819)
+@@ -16,16 +16,24 @@
+             FilteredList(
+                 sortDesc: [NSSortDescriptor(key: "created_at", ascending: true)]
+             ) { (picbel: PicbelEntity) in
+-                HStack {
+-                    if let img = loadImg(picbel.img_id ?? "") {
+-                        Image(uiImage: img)
+-                            .resizable()
+-                            .scaledToFit()
+-                    }
+-                    Text(picbel.name ?? "err")
+-                        .foregroundColor(Color.black)
+-                }
+-                .frame(height: 56)
++                NavigationLink {
++                    DetailScreen(
++                        name: picbel.name ?? "err",
++                        desc: picbel.desc ?? "err",
++                        img: loadImg(picbel.img_id ?? "")
++                    )
++                } label: {
++                    HStack {
++                        if let img = loadImg(picbel.img_id ?? "") {
++                            Image(uiImage: img)
++                                .resizable()
++                                .scaledToFit()
++                        }
++                        Text(picbel.name ?? "err")
++                            .foregroundColor(Color.black)
++                    }
++                    .frame(height: 56)
++                }
+             }
+         }
+         .sheet(isPresented: $showSheet) {
+Index: Challenge6App-Picbel/Picbel/Picbel/DetailScreen.swift
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/Challenge6App-Picbel/Picbel/Picbel/DetailScreen.swift b/Challenge6App-Picbel/Picbel/Picbel/DetailScreen.swift
+new file mode 100644
+--- /dev/null	(date 1690805271322)
++++ b/Challenge6App-Picbel/Picbel/Picbel/DetailScreen.swift	(date 1690805271322)
+@@ -0,0 +1,70 @@
++//
++//  DetailScreen.swift
++//  Picbel
++//
++//  Created by Mostafa Hosseini on 7/31/23.
++//
++
++import MapKit
++import SwiftUI
++
++
++struct DetailScreen: View {
++    var name: String
++    var desc: String
++    var img: UIImage?
++    @State private var isPresented: Bool = false
++
++    @State var tracking: MapUserTrackingMode = .follow
++
++    @StateObject var managerDelegate = locationDelegate()
++
++    var body: some View {
++        VStack {
++            List {
++                if let img = img {
++                    Image(uiImage: img)
++                        .resizable()
++                        .scaledToFit()
++                }
++
++                Section {
++                    Text(desc)
++                        .font(.body)
++                }
++
++                Section {
++                    Text("Click to add location")
++                        .foregroundColor(.blue)
++
++                }.onTapGesture {
++                    managerDelegate.locationManagerDidChangeAuthorization()
++                    isPresented = true
++                }
++            }
++        }
++        .sheet(isPresented: $isPresented) {
++            VStack {
++                Spacer()
++                Map(
++                    coordinateRegion: $managerDelegate.region,
++                    interactionModes: .all,
++                    showsUserLocation: true,
++                    userTrackingMode: $tracking
++                )
++                .ignoresSafeArea()
++            }
++        }
++        .navigationTitle(name)
++    }
++}
++
++struct DetailScreen_Previews: PreviewProvider {
++    static var previews: some View {
++        DetailScreen(
++            name: "A",
++            desc: "lorem ipsum",
++            img: UIImage(named: "nicolas-tissot-335096")
++        )
++    }
++}
