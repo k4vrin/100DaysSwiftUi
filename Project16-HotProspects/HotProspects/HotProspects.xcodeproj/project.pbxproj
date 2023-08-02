@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4CE448342A7A57830065F11A /* PblishObservable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CE448332A7A57830065F11A /* PblishObservable.swift */; };
+		4CE448362A7A597F0065F11A /* SwiftResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CE448352A7A597F0065F11A /* SwiftResult.swift */; };
+		4CE448382A7A5D760065F11A /* ControllImgInterpolation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CE448372A7A5D760065F11A /* ControllImgInterpolation.swift */; };
 		4CED25992A78EECF006F1CC9 /* HotProspectsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CED25982A78EECF006F1CC9 /* HotProspectsApp.swift */; };
 		4CED259B2A78EECF006F1CC9 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CED259A2A78EECF006F1CC9 /* ContentView.swift */; };
 		4CED259D2A78EED0006F1CC9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4CED259C2A78EED0006F1CC9 /* Assets.xcassets */; };
@@ -16,6 +19,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4CE448332A7A57830065F11A /* PblishObservable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PblishObservable.swift; sourceTree = "<group>"; };
+		4CE448352A7A597F0065F11A /* SwiftResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftResult.swift; sourceTree = "<group>"; };
+		4CE448372A7A5D760065F11A /* ControllImgInterpolation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControllImgInterpolation.swift; sourceTree = "<group>"; };
 		4CED25952A78EECF006F1CC9 /* HotProspects.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HotProspects.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4CED25982A78EECF006F1CC9 /* HotProspectsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotProspectsApp.swift; sourceTree = "<group>"; };
 		4CED259A2A78EECF006F1CC9 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -60,6 +66,9 @@
 				4CED259A2A78EECF006F1CC9 /* ContentView.swift */,
 				4CED25A72A78EF7F006F1CC9 /* EnvironmentObjectReading.swift */,
 				4CED25A92A78F170006F1CC9 /* TabsWTabView.swift */,
+				4CE448332A7A57830065F11A /* PblishObservable.swift */,
+				4CE448352A7A597F0065F11A /* SwiftResult.swift */,
+				4CE448372A7A5D760065F11A /* ControllImgInterpolation.swift */,
 				4CED259C2A78EED0006F1CC9 /* Assets.xcassets */,
 				4CED259E2A78EED0006F1CC9 /* HotProspects.entitlements */,
 				4CED259F2A78EED0006F1CC9 /* Preview Content */,
@@ -147,8 +156,11 @@
 			files = (
 				4CED25AA2A78F170006F1CC9 /* TabsWTabView.swift in Sources */,
 				4CED259B2A78EECF006F1CC9 /* ContentView.swift in Sources */,
+				4CE448362A7A597F0065F11A /* SwiftResult.swift in Sources */,
 				4CED25A82A78EF7F006F1CC9 /* EnvironmentObjectReading.swift in Sources */,
 				4CED25992A78EECF006F1CC9 /* HotProspectsApp.swift in Sources */,
+				4CE448382A7A5D760065F11A /* ControllImgInterpolation.swift in Sources */,
+				4CE448342A7A57830065F11A /* PblishObservable.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
