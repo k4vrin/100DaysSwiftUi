@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4C4769C12A7BAEBE003481CD /* CreateContextMenus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C4769C02A7BAEBE003481CD /* CreateContextMenus.swift */; };
+		4C4769C32A7BB31F003481CD /* CustomRowSwipeAc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C4769C22A7BB31F003481CD /* CustomRowSwipeAc.swift */; };
+		4C4769C52A7BB86F003481CD /* LocalNotification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C4769C42A7BB86F003481CD /* LocalNotification.swift */; };
+		4C4769C82A7BBDF6003481CD /* SamplePackage in Frameworks */ = {isa = PBXBuildFile; productRef = 4C4769C72A7BBDF6003481CD /* SamplePackage */; };
+		4C4769CA2A7BBE2A003481CD /* AddDependencies.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C4769C92A7BBE2A003481CD /* AddDependencies.swift */; };
 		4CE448342A7A57830065F11A /* PblishObservable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CE448332A7A57830065F11A /* PblishObservable.swift */; };
 		4CE448362A7A597F0065F11A /* SwiftResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CE448352A7A597F0065F11A /* SwiftResult.swift */; };
 		4CE448382A7A5D760065F11A /* ControllImgInterpolation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CE448372A7A5D760065F11A /* ControllImgInterpolation.swift */; };
@@ -19,6 +24,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4C4769C02A7BAEBE003481CD /* CreateContextMenus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateContextMenus.swift; sourceTree = "<group>"; };
+		4C4769C22A7BB31F003481CD /* CustomRowSwipeAc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomRowSwipeAc.swift; sourceTree = "<group>"; };
+		4C4769C42A7BB86F003481CD /* LocalNotification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalNotification.swift; sourceTree = "<group>"; };
+		4C4769C92A7BBE2A003481CD /* AddDependencies.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddDependencies.swift; sourceTree = "<group>"; };
 		4CE448332A7A57830065F11A /* PblishObservable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PblishObservable.swift; sourceTree = "<group>"; };
 		4CE448352A7A597F0065F11A /* SwiftResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftResult.swift; sourceTree = "<group>"; };
 		4CE448372A7A5D760065F11A /* ControllImgInterpolation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControllImgInterpolation.swift; sourceTree = "<group>"; };
@@ -37,6 +46,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4C4769C82A7BBDF6003481CD /* SamplePackage in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -46,6 +56,7 @@
 		4CED258C2A78EECF006F1CC9 = {
 			isa = PBXGroup;
 			children = (
+				4C4769C92A7BBE2A003481CD /* AddDependencies.swift */,
 				4CED25972A78EECF006F1CC9 /* HotProspects */,
 				4CED25962A78EECF006F1CC9 /* Products */,
 			);
@@ -69,9 +80,12 @@
 				4CE448332A7A57830065F11A /* PblishObservable.swift */,
 				4CE448352A7A597F0065F11A /* SwiftResult.swift */,
 				4CE448372A7A5D760065F11A /* ControllImgInterpolation.swift */,
+				4C4769C02A7BAEBE003481CD /* CreateContextMenus.swift */,
 				4CED259C2A78EED0006F1CC9 /* Assets.xcassets */,
 				4CED259E2A78EED0006F1CC9 /* HotProspects.entitlements */,
 				4CED259F2A78EED0006F1CC9 /* Preview Content */,
+				4C4769C22A7BB31F003481CD /* CustomRowSwipeAc.swift */,
+				4C4769C42A7BB86F003481CD /* LocalNotification.swift */,
 			);
 			path = HotProspects;
 			sourceTree = "<group>";
@@ -100,6 +114,9 @@
 			dependencies = (
 			);
 			name = HotProspects;
+			packageProductDependencies = (
+				4C4769C72A7BBDF6003481CD /* SamplePackage */,
+			);
 			productName = HotProspects;
 			productReference = 4CED25952A78EECF006F1CC9 /* HotProspects.app */;
 			productType = "com.apple.product-type.application";
@@ -128,6 +145,9 @@
 				Base,
 			);
 			mainGroup = 4CED258C2A78EECF006F1CC9;
+			packageReferences = (
+				4C4769C62A7BBDF6003481CD /* XCRemoteSwiftPackageReference "SamplePackage" */,
+			);
 			productRefGroup = 4CED25962A78EECF006F1CC9 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -154,12 +174,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4C4769CA2A7BBE2A003481CD /* AddDependencies.swift in Sources */,
 				4CED25AA2A78F170006F1CC9 /* TabsWTabView.swift in Sources */,
 				4CED259B2A78EECF006F1CC9 /* ContentView.swift in Sources */,
+				4C4769C32A7BB31F003481CD /* CustomRowSwipeAc.swift in Sources */,
 				4CE448362A7A597F0065F11A /* SwiftResult.swift in Sources */,
 				4CED25A82A78EF7F006F1CC9 /* EnvironmentObjectReading.swift in Sources */,
+				4C4769C12A7BAEBE003481CD /* CreateContextMenus.swift in Sources */,
 				4CED25992A78EECF006F1CC9 /* HotProspectsApp.swift in Sources */,
 				4CE448382A7A5D760065F11A /* ControllImgInterpolation.swift in Sources */,
+				4C4769C52A7BB86F003481CD /* LocalNotification.swift in Sources */,
 				4CE448342A7A57830065F11A /* PblishObservable.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -374,6 +398,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		4C4769C62A7BBDF6003481CD /* XCRemoteSwiftPackageReference "SamplePackage" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/twostraws/SamplePackage";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		4C4769C72A7BBDF6003481CD /* SamplePackage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 4C4769C62A7BBDF6003481CD /* XCRemoteSwiftPackageReference "SamplePackage" */;
+			productName = SamplePackage;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 4CED258D2A78EECF006F1CC9 /* Project object */;
 }
