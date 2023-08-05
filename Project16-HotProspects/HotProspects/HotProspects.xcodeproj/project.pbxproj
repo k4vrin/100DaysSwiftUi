@@ -12,6 +12,9 @@
 		4C4769C52A7BB86F003481CD /* LocalNotification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C4769C42A7BB86F003481CD /* LocalNotification.swift */; };
 		4C4769C82A7BBDF6003481CD /* SamplePackage in Frameworks */ = {isa = PBXBuildFile; productRef = 4C4769C72A7BBDF6003481CD /* SamplePackage */; };
 		4C4769CA2A7BBE2A003481CD /* AddDependencies.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C4769C92A7BBE2A003481CD /* AddDependencies.swift */; };
+		4C598AF22A7E85E900F51025 /* ProspectsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C598AF12A7E85E900F51025 /* ProspectsView.swift */; };
+		4C598AF42A7E85F200F51025 /* MeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C598AF32A7E85F200F51025 /* MeView.swift */; };
+		4C598AF62A7E887400F51025 /* Prospect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C598AF52A7E887300F51025 /* Prospect.swift */; };
 		4CE448342A7A57830065F11A /* PblishObservable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CE448332A7A57830065F11A /* PblishObservable.swift */; };
 		4CE448362A7A597F0065F11A /* SwiftResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CE448352A7A597F0065F11A /* SwiftResult.swift */; };
 		4CE448382A7A5D760065F11A /* ControllImgInterpolation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CE448372A7A5D760065F11A /* ControllImgInterpolation.swift */; };
@@ -28,6 +31,9 @@
 		4C4769C22A7BB31F003481CD /* CustomRowSwipeAc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomRowSwipeAc.swift; sourceTree = "<group>"; };
 		4C4769C42A7BB86F003481CD /* LocalNotification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalNotification.swift; sourceTree = "<group>"; };
 		4C4769C92A7BBE2A003481CD /* AddDependencies.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddDependencies.swift; sourceTree = "<group>"; };
+		4C598AF12A7E85E900F51025 /* ProspectsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProspectsView.swift; sourceTree = "<group>"; };
+		4C598AF32A7E85F200F51025 /* MeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeView.swift; sourceTree = "<group>"; };
+		4C598AF52A7E887300F51025 /* Prospect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Prospect.swift; sourceTree = "<group>"; };
 		4CE448332A7A57830065F11A /* PblishObservable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PblishObservable.swift; sourceTree = "<group>"; };
 		4CE448352A7A597F0065F11A /* SwiftResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftResult.swift; sourceTree = "<group>"; };
 		4CE448372A7A5D760065F11A /* ControllImgInterpolation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControllImgInterpolation.swift; sourceTree = "<group>"; };
@@ -53,10 +59,25 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		4CED258C2A78EECF006F1CC9 = {
+		4C598AF02A7E832E00F51025 /* Tut */ = {
 			isa = PBXGroup;
 			children = (
 				4C4769C92A7BBE2A003481CD /* AddDependencies.swift */,
+				4CED25A72A78EF7F006F1CC9 /* EnvironmentObjectReading.swift */,
+				4CED25A92A78F170006F1CC9 /* TabsWTabView.swift */,
+				4CE448332A7A57830065F11A /* PblishObservable.swift */,
+				4CE448352A7A597F0065F11A /* SwiftResult.swift */,
+				4CE448372A7A5D760065F11A /* ControllImgInterpolation.swift */,
+				4C4769C02A7BAEBE003481CD /* CreateContextMenus.swift */,
+				4C4769C22A7BB31F003481CD /* CustomRowSwipeAc.swift */,
+				4C4769C42A7BB86F003481CD /* LocalNotification.swift */,
+			);
+			path = Tut;
+			sourceTree = "<group>";
+		};
+		4CED258C2A78EECF006F1CC9 = {
+			isa = PBXGroup;
+			children = (
 				4CED25972A78EECF006F1CC9 /* HotProspects */,
 				4CED25962A78EECF006F1CC9 /* Products */,
 			);
@@ -73,19 +94,15 @@
 		4CED25972A78EECF006F1CC9 /* HotProspects */ = {
 			isa = PBXGroup;
 			children = (
+				4C598AF02A7E832E00F51025 /* Tut */,
 				4CED25982A78EECF006F1CC9 /* HotProspectsApp.swift */,
 				4CED259A2A78EECF006F1CC9 /* ContentView.swift */,
-				4CED25A72A78EF7F006F1CC9 /* EnvironmentObjectReading.swift */,
-				4CED25A92A78F170006F1CC9 /* TabsWTabView.swift */,
-				4CE448332A7A57830065F11A /* PblishObservable.swift */,
-				4CE448352A7A597F0065F11A /* SwiftResult.swift */,
-				4CE448372A7A5D760065F11A /* ControllImgInterpolation.swift */,
-				4C4769C02A7BAEBE003481CD /* CreateContextMenus.swift */,
+				4C598AF52A7E887300F51025 /* Prospect.swift */,
+				4C598AF12A7E85E900F51025 /* ProspectsView.swift */,
+				4C598AF32A7E85F200F51025 /* MeView.swift */,
 				4CED259C2A78EED0006F1CC9 /* Assets.xcassets */,
 				4CED259E2A78EED0006F1CC9 /* HotProspects.entitlements */,
 				4CED259F2A78EED0006F1CC9 /* Preview Content */,
-				4C4769C22A7BB31F003481CD /* CustomRowSwipeAc.swift */,
-				4C4769C42A7BB86F003481CD /* LocalNotification.swift */,
 			);
 			path = HotProspects;
 			sourceTree = "<group>";
@@ -174,8 +191,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4C598AF22A7E85E900F51025 /* ProspectsView.swift in Sources */,
 				4C4769CA2A7BBE2A003481CD /* AddDependencies.swift in Sources */,
 				4CED25AA2A78F170006F1CC9 /* TabsWTabView.swift in Sources */,
+				4C598AF62A7E887400F51025 /* Prospect.swift in Sources */,
 				4CED259B2A78EECF006F1CC9 /* ContentView.swift in Sources */,
 				4C4769C32A7BB31F003481CD /* CustomRowSwipeAc.swift in Sources */,
 				4CE448362A7A597F0065F11A /* SwiftResult.swift in Sources */,
@@ -185,6 +204,7 @@
 				4CE448382A7A5D760065F11A /* ControllImgInterpolation.swift in Sources */,
 				4C4769C52A7BB86F003481CD /* LocalNotification.swift in Sources */,
 				4CE448342A7A57830065F11A /* PblishObservable.swift in Sources */,
+				4C598AF42A7E85F200F51025 /* MeView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
