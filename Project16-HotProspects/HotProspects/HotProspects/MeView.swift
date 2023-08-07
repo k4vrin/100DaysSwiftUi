@@ -5,14 +5,14 @@
 //  Created by Mostafa Hosseini on 8/5/23.
 //
 
-import SwiftUI
 import CoreImage
 import CoreImage.CIFilterBuiltins
+import SwiftUI
 
 struct MeView: View {
-    
     @State private var name = "Anonymous"
     @State private var emailAddress = "you@yoursite.com"
+    @State private var qrCode = UIImage()
     
     let context = CIContext()
     let filter = CIFilter.qrCodeGenerator()
@@ -33,8 +33,19 @@ struct MeView: View {
                     .interpolation(.none)
                     .scaledToFit()
                     .frame(width: 200, height: 200)
+                    .contextMenu {
+                        Button {
+                            let imageSaver = ImageSaver()
+                            imageSaver.writeToPhotoAlbum(image: qrCode)
+                        } label: {
+                            Label("Save to Photos", systemImage: "square.and.arrow.down")
+                        }
+                    }
             }
             .navigationTitle("Your code")
+            .onAppear(perform: updateQrCode)
+            .onChange(of: name) {_ in updateQrCode()}
+            .onChange(of: emailAddress) {_ in updateQrCode()}
         }
     }
     
@@ -47,6 +58,10 @@ struct MeView: View {
             }
         }
         return UIImage(systemName: "xmark.circle") ?? UIImage()
+    }
+    
+    func updateQrCode() {
+        qrCode = generateQRCode(from: "\(name)\n\(emailAddress)")
     }
 }
 
