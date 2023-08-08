@@ -17,10 +17,10 @@ class Prospect: Identifiable, Codable {
 @MainActor
 class Prospects: ObservableObject {
     @Published private(set) var people: [Prospect]
-    let saveKey = "SavedData"
-    
+    let savePath = FileManager.documentsDirectory.appendingPathComponent("SavedProspects")
+
     init() {
-        if let data = UserDefaults.standard.data(forKey: saveKey) {
+        if let data = try? Data(contentsOf: savePath) {
             if let decoded = try? JSONDecoder().decode([Prospect].self, from: data) {
                 people = decoded
                 return
@@ -28,18 +28,21 @@ class Prospects: ObservableObject {
         }
         people = []
     }
-    
+
     private func save() {
-        if let encoded = try? JSONEncoder().encode(people) {
-            UserDefaults.standard.set(encoded, forKey: saveKey)
+        do {
+            let data = try JSONEncoder().encode(people)
+            try data.write(to: savePath, options: [.atomic, .completeFileProtection])
+        } catch {
+            print("Unable to save data")
         }
     }
-    
+
     func add(_ prospect: Prospect) {
         people.append(prospect)
         save()
     }
-    
+
     func toggle(_ prospect: Prospect) {
         // It's important to call this before the actual change
         objectWillChange.send()
@@ -47,3 +50,37 @@ class Prospects: ObservableObject {
         save()
     }
 }
+
+// @MainActor
+// class Prospects: ObservableObject {
+//    @Published private(set) var people: [Prospect]
+//    let saveKey = "SavedData"
+//
+//    init() {
+//        if let data = UserDefaults.standard.data(forKey: saveKey) {
+//            if let decoded = try? JSONDecoder().decode([Prospect].self, from: data) {
+//                people = decoded
+//                return
+//            }
+//        }
+//        people = []
+//    }
+//
+//    private func save() {
+//        if let encoded = try? JSONEncoder().encode(people) {
+//            UserDefaults.standard.set(encoded, forKey: saveKey)
+//        }
+//    }
+//
+//    func add(_ prospect: Prospect) {
+//        people.append(prospect)
+//        save()
+//    }
+//
+//    func toggle(_ prospect: Prospect) {
+//        // It's important to call this before the actual change
+//        objectWillChange.send()
+//        prospect.isConected.toggle()
+//        save()
+//    }
+// }

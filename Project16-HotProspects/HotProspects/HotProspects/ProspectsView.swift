@@ -5,17 +5,24 @@
 //  Created by Mostafa Hosseini on 8/5/23.
 //
 
-import SwiftUI
 import CodeScanner
+import SwiftUI
 import UserNotifications
 
 struct ProspectsView: View {
     enum FilterType {
         case none, contacted, uncontacted
     }
+
+    enum SortType {
+        case name, mostRecent
+    }
     
     @EnvironmentObject var prospects: Prospects
     @State private var isShowingScanner = false
+    @State private var isSortDialogShowing = false
+    @State private var sortOrder = SortType.mostRecent
+    @State private var filteredProspects: [Prospect] = []
     
     let filter: FilterType
     
@@ -23,11 +30,17 @@ struct ProspectsView: View {
         NavigationView {
             List {
                 ForEach(filteredProspects) { prospect in
-                    VStack(alignment: .leading) {
-                        Text(prospect.name)
-                            .font(.headline)
-                        Text(prospect.emailAddress)
-                            .foregroundColor(.secondary)
+                    HStack {
+                        VStack(alignment: .leading) {
+                            Text(prospect.name)
+                                .font(.headline)
+                            Text(prospect.emailAddress)
+                                .foregroundColor(.secondary)
+                        }
+                        Spacer()
+                        if case .none = filter, prospect.isConected {
+                            Image(systemName: "hand.thumbsup.circle")
+                        }
                     }
                     .swipeActions {
                         if prospect.isConected {
@@ -55,21 +68,42 @@ struct ProspectsView: View {
                     }
                 }
             }
-                .navigationTitle(title)
-                .toolbar {
-                    Button {
-                        isShowingScanner = true
-                    } label: {
-                        Label("Scan", systemImage: "qrcode.viewfinder")
-                    }
+            .navigationTitle(title)
+            .toolbar {
+                Button {
+                    isShowingScanner = true
+                } label: {
+                    Label("Scan", systemImage: "qrcode.viewfinder")
                 }
-                .sheet(isPresented: $isShowingScanner) {
-                    CodeScannerView(
-                        codeTypes: [.qr],
-                        simulatedData: "Paul Hudson\npaul@hackingwithswift.com",
-                        completion: handleScan
-                    )
+                Button {
+                    isSortDialogShowing = true
+                } label: {
+                    Label("Scan", systemImage: "slider.horizontal.3")
                 }
+            }
+            .sheet(isPresented: $isShowingScanner) {
+                CodeScannerView(
+                    codeTypes: [.qr],
+                    simulatedData: "Paul Hudson\npaul@hackingwithswift.com",
+                    completion: handleScan
+                )
+            }
+            .confirmationDialog("Sort order", isPresented: $isSortDialogShowing) {
+                Button {
+                    sortOrder = .name
+                } label: {
+                    Text("By name")
+                }
+                Button {
+                    sortOrder = .mostRecent
+                } label: {
+                    Text("By most recent")
+                }
+                Button("Cancel", role: .cancel) {}
+            }
+            .onAppear(perform: updateList)
+            .onChange(of: sortOrder) { _ in updateList() }
+            .animation(.default, value: sortOrder)
         }
     }
     
@@ -83,14 +117,26 @@ struct ProspectsView: View {
             return "Uncontacted people"
         }
     }
-    var filteredProspects: [Prospect] {
+    
+    func updateList() {
+        // pass a predicate to this method that returns true when the first element should be ordered before the second.
+        func sortF(el1: Prospect, el2: Prospect) -> Bool {
+            switch sortOrder {
+            case .name:
+                // the second element should be bigger than first. ascending order
+                return el2.name > el1.name
+            case .mostRecent:
+                return true
+            }
+        }
+        
         switch filter {
         case .none:
-            return prospects.people
+            filteredProspects = prospects.people.sorted(by: sortF)
         case .contacted:
-            return prospects.people.filter { $0.isConected }
+            filteredProspects = prospects.people.filter { $0.isConected }.sorted(by: sortF)
         case .uncontacted:
-            return prospects.people.filter { !$0.isConected }
+            filteredProspects = prospects.people.filter { !$0.isConected }.sorted(by: sortF)
         }
     }
     
@@ -99,7 +145,7 @@ struct ProspectsView: View {
         switch result {
         case .success(let res):
             let details = res.string.components(separatedBy: "\n")
-            guard details.count == 2 else {return}
+            guard details.count == 2 else { return }
             let person = Prospect()
             person.name = details[0]
             person.emailAddress = details[1]
@@ -131,13 +177,12 @@ struct ProspectsView: View {
             if settings.authorizationStatus == .authorized {
                 addRequest()
             } else {
-                center.requestAuthorization(options: [.alert, .badge, .sound]) { success, error in
+                center.requestAuthorization(options: [.alert, .badge, .sound]) { success, _ in
                     if success {
                         addRequest()
                     } else {
                         print("D'oh!")
                     }
-                    
                 }
             }
         }
