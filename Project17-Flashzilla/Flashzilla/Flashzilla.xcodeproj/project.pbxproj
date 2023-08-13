@@ -16,6 +16,8 @@
 		4C13C8D42A83B5CE005C8521 /* ChainGestures.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C13C8D32A83B5CE005C8521 /* ChainGestures.swift */; };
 		4C13C8D62A83B88D005C8521 /* UseCoreHaptics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C13C8D52A83B88D005C8521 /* UseCoreHaptics.swift */; };
 		4C13C8D82A83BEEA005C8521 /* DisablingUserInteractivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C13C8D72A83BEEA005C8521 /* DisablingUserInteractivity.swift */; };
+		4C9423A32A89314800156EBD /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C9423A22A89314800156EBD /* Card.swift */; };
+		4C9423A52A89321500156EBD /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C9423A42A89321500156EBD /* CardView.swift */; };
 		4CC720692A84E55A00FBCCDD /* RepeatedEvents.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CC720682A84E55A00FBCCDD /* RepeatedEvents.swift */; };
 		4CC7206B2A84EC3A00FBCCDD /* AppMoveToBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CC7206A2A84EC3A00FBCCDD /* AppMoveToBackground.swift */; };
 		4CC7206D2A84F14400FBCCDD /* AccessibilityNeeds.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CC7206C2A84F14300FBCCDD /* AccessibilityNeeds.swift */; };
@@ -33,6 +35,8 @@
 		4C13C8D32A83B5CE005C8521 /* ChainGestures.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChainGestures.swift; sourceTree = "<group>"; };
 		4C13C8D52A83B88D005C8521 /* UseCoreHaptics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UseCoreHaptics.swift; sourceTree = "<group>"; };
 		4C13C8D72A83BEEA005C8521 /* DisablingUserInteractivity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisablingUserInteractivity.swift; sourceTree = "<group>"; };
+		4C9423A22A89314800156EBD /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
+		4C9423A42A89321500156EBD /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 		4CC720682A84E55A00FBCCDD /* RepeatedEvents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepeatedEvents.swift; sourceTree = "<group>"; };
 		4CC7206A2A84EC3A00FBCCDD /* AppMoveToBackground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppMoveToBackground.swift; sourceTree = "<group>"; };
 		4CC7206C2A84F14300FBCCDD /* AccessibilityNeeds.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessibilityNeeds.swift; sourceTree = "<group>"; };
@@ -70,6 +74,8 @@
 			children = (
 				4C13C8CE2A83A091005C8521 /* Tut */,
 				4C13C8BF2A83A079005C8521 /* FlashzillaApp.swift */,
+				4C9423A22A89314800156EBD /* Card.swift */,
+				4C9423A42A89321500156EBD /* CardView.swift */,
 				4C13C8C12A83A079005C8521 /* ContentView.swift */,
 				4C13C8C32A83A07A005C8521 /* Assets.xcassets */,
 				4C13C8C52A83A07A005C8521 /* Flashzilla.entitlements */,
@@ -181,6 +187,8 @@
 				4C13C8D02A83A0BA005C8521 /* UseGestures.swift in Sources */,
 				4CC720692A84E55A00FBCCDD /* RepeatedEvents.swift in Sources */,
 				4C13C8D62A83B88D005C8521 /* UseCoreHaptics.swift in Sources */,
+				4C9423A52A89321500156EBD /* CardView.swift in Sources */,
+				4C9423A32A89314800156EBD /* Card.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -318,7 +326,7 @@
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
@@ -356,7 +364,7 @@
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
