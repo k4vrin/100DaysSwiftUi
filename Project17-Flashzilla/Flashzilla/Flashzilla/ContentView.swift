@@ -12,10 +12,12 @@ struct ContentView: View {
     @Environment(\.accessibilityVoiceOverEnabled) var voiceOverEnabled
 
     @Environment(\.scenePhase) var scenePhase
-    @State private var cards = [Card](repeating: Card.example, count: 10)
+    @State private var cards = [Card]()
     @State private var timeRemaining = 100
     @State private var isActive = true
     @State private var showingEditScreen = false
+    
+    let savePath = FileManager.documentsDirectory.appendingPathComponent(EditCard.editCardKey)
     
     let timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
     
@@ -35,10 +37,17 @@ struct ContentView: View {
                     .clipShape(Capsule())
                 
                 ZStack {
-                    ForEach(0 ..< cards.count, id: \.self) { index in
-                        CardView(card: cards[index]) {
+                    ForEach(
+                        Array(zip(cards.indices, cards)),
+                        id: \.1
+                    ) { index, card in
+                        CardView(card: card) {
                             withAnimation {
                                 removeCard(at: index)
+                            }
+                        } onWrongAnswer: {
+                            withAnimation {
+                                cards.insert(cards.popLast()!, at: 0)
                             }
                         }
                         .stacked(at: index, in: cards.count)
@@ -129,6 +138,8 @@ struct ContentView: View {
                 isActive = false
             }
         }
+        .sheet(isPresented: $showingEditScreen, onDismiss: resetCards, content: EditCard.init)
+        .onAppear(perform: resetCards)
     }
     
     func removeCard(at index: Int) {
@@ -141,9 +152,17 @@ struct ContentView: View {
     }
     
     func resetCards() {
-        cards = Array<Card>(repeating: Card.example, count: 10)
+        loadData()
         timeRemaining = 100
         isActive = true
+    }
+    
+    func loadData() {
+        if let data = try? Data(contentsOf: savePath) {
+            if let decode = try? JSONDecoder().decode([Card].self, from: data) {
+                cards = decode
+            }
+        }
     }
 }
 

@@ -16,6 +16,7 @@
 		4C13C8D42A83B5CE005C8521 /* ChainGestures.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C13C8D32A83B5CE005C8521 /* ChainGestures.swift */; };
 		4C13C8D62A83B88D005C8521 /* UseCoreHaptics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C13C8D52A83B88D005C8521 /* UseCoreHaptics.swift */; };
 		4C13C8D82A83BEEA005C8521 /* DisablingUserInteractivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C13C8D72A83BEEA005C8521 /* DisablingUserInteractivity.swift */; };
+		4C5718892A8E2FA40080ED63 /* FileMangerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C5718882A8E2FA40080ED63 /* FileMangerExtension.swift */; };
 		4C81BD532A8B87D5006EBEAB /* EditCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C81BD522A8B87D5006EBEAB /* EditCard.swift */; };
 		4C9423A32A89314800156EBD /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C9423A22A89314800156EBD /* Card.swift */; };
 		4C9423A52A89321500156EBD /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C9423A42A89321500156EBD /* CardView.swift */; };
@@ -36,6 +37,7 @@
 		4C13C8D32A83B5CE005C8521 /* ChainGestures.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChainGestures.swift; sourceTree = "<group>"; };
 		4C13C8D52A83B88D005C8521 /* UseCoreHaptics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UseCoreHaptics.swift; sourceTree = "<group>"; };
 		4C13C8D72A83BEEA005C8521 /* DisablingUserInteractivity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisablingUserInteractivity.swift; sourceTree = "<group>"; };
+		4C5718882A8E2FA40080ED63 /* FileMangerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileMangerExtension.swift; sourceTree = "<group>"; };
 		4C81BD522A8B87D5006EBEAB /* EditCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditCard.swift; sourceTree = "<group>"; };
 		4C9423A22A89314800156EBD /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
 		4C9423A42A89321500156EBD /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
@@ -58,6 +60,7 @@
 		4C13C8B32A83A079005C8521 = {
 			isa = PBXGroup;
 			children = (
+				4C5718882A8E2FA40080ED63 /* FileMangerExtension.swift */,
 				4C13C8BE2A83A079005C8521 /* Flashzilla */,
 				4C13C8BD2A83A079005C8521 /* Products */,
 			);
@@ -183,6 +186,7 @@
 				4CC7206D2A84F14400FBCCDD /* AccessibilityNeeds.swift in Sources */,
 				4C13C8D22A83ACF3005C8521 /* UseGesturesNested.swift in Sources */,
 				4CC7206B2A84EC3A00FBCCDD /* AppMoveToBackground.swift in Sources */,
+				4C5718892A8E2FA40080ED63 /* FileMangerExtension.swift in Sources */,
 				4C13C8C22A83A079005C8521 /* ContentView.swift in Sources */,
 				4C13C8C02A83A079005C8521 /* FlashzillaApp.swift in Sources */,
 				4C13C8D82A83BEEA005C8521 /* DisablingUserInteractivity.swift in Sources */,
