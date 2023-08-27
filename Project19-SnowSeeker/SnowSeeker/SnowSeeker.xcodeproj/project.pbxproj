@@ -15,6 +15,9 @@
 		4C4DC61D2A96090500F35D29 /* AlertAndSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C4DC61C2A96090500F35D29 /* AlertAndSheet.swift */; };
 		4C4DC61F2A960F0800F35D29 /* GroupsAsLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C4DC61E2A960F0800F35D29 /* GroupsAsLayout.swift */; };
 		4C4DC6212A96111900F35D29 /* SearchableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C4DC6202A96111900F35D29 /* SearchableView.swift */; };
+		4C6A75C52A9BABCA0003BAFE /* Facility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C6A75C42A9BABCA0003BAFE /* Facility.swift */; };
+		4C6A75C72A9BB00E0003BAFE /* Favorites.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C6A75C62A9BB00E0003BAFE /* Favorites.swift */; };
+		4C6A75C92A9BB4580003BAFE /* FileManager-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C6A75C82A9BB4580003BAFE /* FileManager-Extension.swift */; };
 		4CA8DA022A97689100AC916C /* resorts.json in Resources */ = {isa = PBXBuildFile; fileRef = 4CA8DA012A97689100AC916C /* resorts.json */; };
 		4CA8DA042A97692500AC916C /* Resort.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CA8DA032A97692500AC916C /* Resort.swift */; };
 		4CA8DA062A976AC600AC916C /* Bundle-Decodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CA8DA052A976AC600AC916C /* Bundle-Decodable.swift */; };
@@ -35,6 +38,9 @@
 		4C4DC61C2A96090500F35D29 /* AlertAndSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertAndSheet.swift; sourceTree = "<group>"; };
 		4C4DC61E2A960F0800F35D29 /* GroupsAsLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupsAsLayout.swift; sourceTree = "<group>"; };
 		4C4DC6202A96111900F35D29 /* SearchableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchableView.swift; sourceTree = "<group>"; };
+		4C6A75C42A9BABCA0003BAFE /* Facility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Facility.swift; sourceTree = "<group>"; };
+		4C6A75C62A9BB00E0003BAFE /* Favorites.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Favorites.swift; sourceTree = "<group>"; };
+		4C6A75C82A9BB4580003BAFE /* FileManager-Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FileManager-Extension.swift"; sourceTree = "<group>"; };
 		4CA8DA012A97689100AC916C /* resorts.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = resorts.json; sourceTree = "<group>"; };
 		4CA8DA032A97692500AC916C /* Resort.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Resort.swift; sourceTree = "<group>"; };
 		4CA8DA052A976AC600AC916C /* Bundle-Decodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle-Decodable.swift"; sourceTree = "<group>"; };
@@ -87,6 +93,9 @@
 				4C4DC6102A95FFCC00F35D29 /* SnowSeeker.entitlements */,
 				4C4DC6112A95FFCC00F35D29 /* Preview Content */,
 				4CA8DA052A976AC600AC916C /* Bundle-Decodable.swift */,
+				4C6A75C42A9BABCA0003BAFE /* Facility.swift */,
+				4C6A75C62A9BB00E0003BAFE /* Favorites.swift */,
+				4C6A75C82A9BB4580003BAFE /* FileManager-Extension.swift */,
 			);
 			path = SnowSeeker;
 			sourceTree = "<group>";
@@ -187,11 +196,14 @@
 				4CA8DA062A976AC600AC916C /* Bundle-Decodable.swift in Sources */,
 				4CA8DA082A9782A300AC916C /* WelcomeView.swift in Sources */,
 				4C4DC60B2A95FFCB00F35D29 /* SnowSeekerApp.swift in Sources */,
+				4C6A75C52A9BABCA0003BAFE /* Facility.swift in Sources */,
 				4CA8DA0E2A9796D400AC916C /* ResortDetailsView.swift in Sources */,
 				4C4DC61D2A96090500F35D29 /* AlertAndSheet.swift in Sources */,
 				4CA8DA0A2A9794C600AC916C /* ResortView.swift in Sources */,
 				4CA8DA0C2A9795ED00AC916C /* SkiDetailsView.swift in Sources */,
+				4C6A75C72A9BB00E0003BAFE /* Favorites.swift in Sources */,
 				4C4DC61B2A96004B00F35D29 /* SideBySide.swift in Sources */,
+				4C6A75C92A9BB4580003BAFE /* FileManager-Extension.swift in Sources */,
 				4C4DC61F2A960F0800F35D29 /* GroupsAsLayout.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
